@@ -1,7 +1,7 @@
 # Couple-quest
 Simple "board-like" game for couples.
 
-Now everything is in Czech, there is easy way to add task in other languages.
+Now everything is in Czech, but there is easy way to add task in other languages.
 
 Curently is done only "enigine" and few test tasks.
 
