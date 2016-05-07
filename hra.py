@@ -10,10 +10,10 @@ from PIL import Image, ImageTk  #Zpracování obrázků
 from slice import cs
 
 karta = random.randint(10, 50) #  první karta
-faze = "I" # fáze hry On/Ona (odměny)  I/R/V (úkoly) K=konec
-minulafaze = "S" #start, domíchání balíčku dle zdroje karet
-ona = 13 # Políčko na kterém stojí, cíl je 15
-on = 13
+faze = "S" # fáze hry On/Ona (odměny)  I/R/V (úkoly) K=konec
+minulafaze = 0 #start, domíchání balíčku dle zdroje karet
+ona = 0 # Políčko na kterém stojí, cíl je 15
+on = 0
 hraje = random.randint(0, 1) # Los kdo je na řadě (0na/On)
 if hraje == 1:
         rada = "Ona"
