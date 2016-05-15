@@ -11,7 +11,7 @@ Script import modules: random, Tkinter and [PIL](https://pypi.python.org/pypi/Pi
 
 ### Contribute
 ##### Add own modul with tasks.
-Tasks are stored in /slice in python modules in lists.
+Tasks are stored in [/slice](/slice) in python modules as [lists](https://docs.python.org/2/tutorial/introduction.html#lists).
 In module are tasks sorted in 8 separate list, 4 for each gender
 Game have three phases I > R > V. (_IOn_, _ROn_, _VOn_ are tasks for him) (_IOna_, _ROna_, _VOna_ are tasks for her)
 Player which first gain 15 points are rewarded with task from _Ona_ (reward for him) and _On_ (for her).
