@@ -7,11 +7,11 @@
 import random
 from Tkinter import * #GUI
 from PIL import Image, ImageTk  #Zpracování obrázků
-from slice import cs
+
 
 karta = random.randint(10, 50) #  první karta
-faze = "S" # fáze hry On/Ona (odměny)  I/R/V (úkoly) K=konec
-minulafaze = 0 #start, domíchání balíčku dle zdroje karet
+faze = "I" # fáze hry On/Ona (odměny)  I/R/V (úkoly) K=konec
+minulafaze = "S" #start, domíchání balíčku dle zdroje karet
 ona = 0 # Políčko na kterém stojí, cíl je 15
 on = 0
 hraje = random.randint(0, 1) # Los kdo je na řadě (0na/On)
@@ -19,10 +19,9 @@ if hraje == 1:
         rada = "Ona"
 else:
         rada = "On"
-vyberOn=range(1,51) #karty které jsou v dané fázi k dispozici
-vyberOna=range(1,51) #karty které jsou v dané fázi k dispozici
 dal = False #pokračovat přes cílové skore
-data= "cs." # img/ pro obrázky cs. pro český text
+data= "en" # img/ pro obrázky cs pro český text,!Změnit i import
+from slice import en
  ############## Definování funkcí ################
 
 
@@ -38,11 +37,11 @@ def kolo(): # funkce periodicky měníci "hraje" a losující další kartu
                 karta = vyberOn.pop(random.randint(0, len(vyberOn)-1)) #výběr karty
         schraje.configure(text=rada) # kdo je na řadě do GUI
         if data == "img/":
-                photo = ImageTk.PhotoImage(Image.open("slice/%s%d%s" % (data, karta, faze))) #aktualizace karty
+                photo = ImageTk.PhotoImage(Image.open("slice/%s%d%s.png" % (data, karta, faze))) #aktualizace karty
                 img.configure(image=photo)
                 img.image=photo #keep reference (kvůli garbage collectoru, špatná implementace v Tk)
         else:
-                photo=eval("%s%s%s[%s]" % (data, faze, rada, karta))
+                photo=eval("%s.%s%s[%s]" % (data, faze, rada, karta))
                 img.configure(text=(photo), compound=CENTER, font=(None,20), fg="white", wraplength=650)
 
 def jefaze(): #ověření a nastavení "faze" hry
@@ -99,17 +98,17 @@ def balicek(): # obnoví balíček při přechod k další fázi
                         print("nový balíček jen On")
         else:
                 if not(faze==minulafaze):
-                        je=("%sOna" % data)
+                        je=("%s.%sOna" % (data, faze))
                         vyberOna=range(1, (len(eval(je))))
-                        je=("%sOn" % data)
+                        je=("%s.%sOn" % (data, faze))
                         vyberOn=range(1, (len(eval(je))))
                         print("nový balíček Oba")
                 elif len(vyberOna)==0:
-                        je=("%s%sOna" % (data, faze))
+                        je=("%s.%sOna" % (data, faze))
                         vyberOna=range(1, (len(eval(je))))
                         print("nový balíček jen Ona")
                 elif len(vyberOn)==0:
-                        je=("%s%sOn" % (data, faze))
+                        je=("%s.%sOn" % (data, faze))
                         vyberOn=range(1, (len(eval(je))))
                         print("nový balíček jen On")                        
 
@@ -151,19 +150,19 @@ def end(): #zjištění zda není konec hry a případné ukončovací kroky
                 ba.configure(state=DISABLED) #deaktivace ovládacích prvků
                 bn.configure(state=DISABLED)
                 if data == "img/":
-                        photo=ImageTk.PhotoImage(Image.open("slice/%s%d%s" % (data, (random.randint(1, 50)), rada) )) #poslední obrázek
+                        photo=ImageTk.PhotoImage(Image.open("slice/%s%d%s.png" % (data, (random.randint(1, 50)), rada) )) #poslední obrázek
                         img.configure(image=photo)
                         img.image=photo #keep reference
                 else:
                         if rada == "On":
-                                je=("%sOn" % (data))
+                                je=("%s.On" % (data))
                                 vyberOn=range(1, (len(eval(je))))
-                                karta = vyberOn.pop(random.randint(0, len(vyberOn)-1))
+                                karta = vyberOn.pop(random.randint(1, len(vyberOn)-1))
                         else:
-                                je=("%sOna" % (data))
+                                je=("%s.Ona" % (data))
                                 vyberOna=range(1, (len(eval(je))))
-                                karta = vyberOna.pop(random.randint(0, len(vyberOna)-1))
-                        photo=eval("%s%s[%s]" % (data, rada, karta))
+                                karta = vyberOna.pop(random.randint(1, len(vyberOna)-1))
+                        photo=eval("%s.%s[%s]" % (data, rada, karta))
                         img.configure(text=(photo))
 
 
@@ -171,12 +170,14 @@ def end(): #zjištění zda není konec hry a případné ukončovací kroky
 
 hl = Tk() #hlavní okno
 hl.title("Love game")
+
 ba = Button(hl, text="OK", command=ok) #hlavní ovládací prvky
 bn = Button(hl, text="Fant", command=fant)
 bn.grid(row=0, column=2, padx=10, pady=10)
 ba.grid(row=0, column=0, padx=10, pady=10)
 score = Frame(hl) #rámec v němž je zobrazen stav hry
 score.grid(row=1, columnspan=3)
+balicek()
 scona = Label(score, width=3, fg="red")
 scona.grid(row=0, column=0)
 scon = Label(score, width=3, fg="blue")
