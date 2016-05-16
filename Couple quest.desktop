@@ -2,10 +2,10 @@
 
 [Desktop Entry]
 Name=Couple Quest
-Exec=python /home/clon/Plocha/Couple-quest/hra.py
-Icon=/home/clon/Plocha/Couple-quest/slice/hra.png
+Exec=python ../hra.py
+Icon=../slice/hra.png
 StartupNotify=false
 Terminal=false
 Type=Application
 GenericName=Board game for couples
-Path=/home/clon/Plocha/Couple-quest
+Path=

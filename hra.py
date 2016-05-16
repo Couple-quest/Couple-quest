@@ -170,24 +170,25 @@ def end(): #zjištění zda není konec hry a případné ukončovací kroky
 
 hl = Tk() #hlavní okno
 hl.title("Love game")
-
 ba = Button(hl, text="OK", command=ok) #hlavní ovládací prvky
 bn = Button(hl, text="Fant", command=fant)
 bn.grid(row=0, column=2, padx=10, pady=10)
 ba.grid(row=0, column=0, padx=10, pady=10)
 score = Frame(hl) #rámec v němž je zobrazen stav hry
 score.grid(row=1, columnspan=3)
-balicek()
-scona = Label(score, width=3, fg="red")
+scona = Label(score, width=3, fg="red",text=ona)
 scona.grid(row=0, column=0)
-scon = Label(score, width=3, fg="blue")
+scon = Label(score, width=3, fg="blue", text=on)
 scon.grid(row=0, column=3)
-schraje = Label(score, width=3, bg="white")
+schraje = Label(score, width=3, bg="white",text=rada)
 schraje.grid(row=0, column=1)
+balicek()
 if data != "img/":
         photo=ImageTk.PhotoImage(Image.open("slice/K.png" )) #ůvdoní obrázek s místem na text
 else:
         photo=ImageTk.PhotoImage(Image.open("slice/S.png" )) #ůvdoní obrázek
+
 img = Label(hl, image=photo) #label pro obrázek
-img.grid(row=4, columnspan=3)       
+img.grid(row=4, columnspan=3)
+fant()
 hl.mainloop()
