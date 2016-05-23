@@ -2,40 +2,40 @@
 # -*- coding: utf-8 -*-
 
 
-#### deklarování proměnných a import funkcí #####
+#### deklarování proměnných a import funkcí ##### declaration, import
 
 import random
 from Tkinter import * #GUI
-from PIL import Image, ImageTk  #Zpracování obrázků
+from PIL import Image, ImageTk  #Zpracování obrázků #image procesing
 
 
-karta = random.randint(10, 50) #  první karta
+karta = random.randint(10, 50) #  první karta 
 faze = "I" # fáze hry On/Ona (odměny)  I/R/V (úkoly) K=konec
 minulafaze = "S" #start, domíchání balíčku dle zdroje karet
-ona = 0 # Políčko na kterém stojí, cíl je 15
+ona = 0 # Políčko na kterém stojí, cíl je 15 ##start pozition
 on = 0
-hraje = random.randint(0, 1) # Los kdo je na řadě (0na/On)
+hraje = random.randint(0, 1) # Los kdo je na řadě (0na/On) 
 if hraje == 1:
         rada = "Ona"
 else:
         rada = "On"
-dal = False #pokračovat přes cílové skore
-data= "en" # img/ pro obrázky cs pro český text,!Změnit i import
-from slice import en
- ############## Definování funkcí ################
+dal = False #pokračovat přes cílové skore #continue after finish
+data= "cs" # img/ pro obrázky cs pro český text,!Změnit i import ## Change task source ("cs" "en" , experimental "img/")
+from slice import cs
+ ############## Definování funkcí ################ def. functions
 
 
-def kolo(): # funkce periodicky měníci "hraje" a losující další kartu
+def kolo(): # funkce periodicky měníci "hraje" a losující další kartu #### periodicaly change "hraje" and draw card
         global karta, hraje, rada
         if hraje == 1:
                 hraje =-1
                 rada = "Ona"
-                karta = vyberOna.pop(random.randint(0, len(vyberOna)-1)) #výběr karty
+                karta = vyberOna.pop(random.randint(0, len(vyberOna)-1)) #výběr karty ##select card
         else:
                 hraje =+ 1
                 rada = "On"
                 karta = vyberOn.pop(random.randint(0, len(vyberOn)-1)) #výběr karty
-        schraje.configure(text=rada) # kdo je na řadě do GUI
+        schraje.configure(text=rada) # kdo je na řadě do GUI ###  show player in GUI
         if data == "img/":
                 photo = ImageTk.PhotoImage(Image.open("slice/%s%d%s.png" % (data, karta, faze))) #aktualizace karty
                 img.configure(image=photo)
@@ -44,7 +44,7 @@ def kolo(): # funkce periodicky měníci "hraje" a losující další kartu
                 photo=eval("%s.%s%s[%s]" % (data, faze, rada, karta))
                 img.configure(text=(photo), compound=CENTER, font=(None,20), fg="white", wraplength=650)
 
-def jefaze(): #ověření a nastavení "faze" hry
+def jefaze(): #ověření a nastavení "faze" hry ##set phase of game to "faze"
         global hraje, faze, minulafaze
         minulafaze=faze
         if (on or ona) < 6:
@@ -54,16 +54,16 @@ def jefaze(): #ověření a nastavení "faze" hry
         else:
                 faze = "V"
 
-def bod(): #přidání bodu pro dle "hraje"
+def bod(): #přidání bodu pro dle "hraje" ## add point by "hraje"
         global hraje, ona, on
         if hraje == 1:
                 ona = ona+1
-                scona.configure(text=ona) #zobrazení aktuálního stavu bodů v GUI
+                scona.configure(text=ona) #zobrazení aktuálního stavu bodů v GUI #show in GUI
         else:
                 on = on+1
                 scon.configure(text=on)
 
-################## ovládání z příkazové řádky #############
+################## ovládání z příkazové řádky ############# comand line control
 ##def ukol(): #výběr karty a vyhodnocení splnění
 ##        while True: #symčka pro vytup od uživatele 0 nebo 1
 ##                try:
@@ -83,7 +83,7 @@ def bod(): #přidání bodu pro dle "hraje"
 ##                print("nikdo" ,splneno)
 #####################################################
 
-def balicek(): # obnoví balíček při přechod k další fázi
+def balicek(): # obnoví balíček při přechod k další fázi #set new deck when "faze" is changed
         global vyberOna, vyberOn
         if data == "img/":
                 if not(faze==minulafaze):
@@ -113,7 +113,7 @@ def balicek(): # obnoví balíček při přechod k další fázi
                         print("nový balíček jen On")                        
 
         
-def ok(): #splněno
+def ok(): #splněno ##task completed
         jefaze()
         balicek()
         kolo()
@@ -123,14 +123,14 @@ def ok(): #splněno
         print("karta %s" % str(karta)+faze)
         end()
 
-def restart(): #pokračovat ve hře
+def restart(): #pokračovat ve hře ## continue play after reach finish
 		global dal
 		bn.configure(state=NORMAL) #aktivace ovládacích prvků
 		dal = True
 		print("pokracovat")
 		
 
-def fant(): #fant
+def fant(): #fant ##dare
         jefaze()
         balicek()
         kolo()
@@ -184,9 +184,9 @@ schraje = Label(score, width=3, bg="white",text=rada)
 schraje.grid(row=0, column=1)
 balicek()
 if data != "img/":
-        photo=ImageTk.PhotoImage(Image.open("slice/K.png" )) #ůvdoní obrázek s místem na text
+        photo=ImageTk.PhotoImage(Image.open("slice/K.png" )) #úvodní obrázek s místem na text
 else:
-        photo=ImageTk.PhotoImage(Image.open("slice/S.png" )) #ůvdoní obrázek
+        photo=ImageTk.PhotoImage(Image.open("slice/S.png" )) #úvodní obrázek
 
 img = Label(hl, image=photo) #label pro obrázek
 img.grid(row=4, columnspan=3)
