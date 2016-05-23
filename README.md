@@ -6,8 +6,11 @@ Script is curentli worknig with task on images (wich I had before but don't have
 TKinter is used for GUI
 
 ### Launch game
+##### Linux
 In main folder (Couple-quest) run `python hra.py`
 Script import modules: random, Tkinter and [PIL](https://pypi.python.org/pypi/Pillow/1.7.8)
+##### Windows
+In [/build/win](/build/win) execute hra.exe
 
 ### Contribute
 ##### Add own modul with tasks.
