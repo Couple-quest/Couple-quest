@@ -13,6 +13,7 @@ Script import modules: random, Tkinter and [PIL](https://pypi.python.org/pypi/Pi
 In [/build/win](/build/win) execute hra.exe
 
 ### Contribute
+Port/Build for IPhone  and Android.
 ##### Add own modul with tasks.
 Tasks are stored in [/slice](/slice) in python modules as [lists](https://docs.python.org/2/tutorial/introduction.html#lists).
 In module are tasks sorted in 8 separate list, 4 for each gender
