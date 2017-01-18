@@ -7,6 +7,8 @@ TKinter is used for GUI
 
 ### Launch game
 ##### Linux
+Depends on *python-tk* and *python-pil*
+
 In main folder (Couple-quest) run `python hra.py`
 Script import modules: random, Tkinter and [PIL](https://pypi.python.org/pypi/Pillow/1.7.8)
 ##### Windows
