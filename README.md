@@ -1,6 +1,8 @@
 # Couple-quest <img src="https://github.com/Clonewayx/Couple-quest/blob/master/slice/hra.png" align="right">
 Simple "board-like" game for couples.
 
+Rewrite in GDScript
+
 Now variables and interface is in Czech, but task are imported from [/slice](/slice) (in any language).
 Script is curentli worknig with task on images (wich I had before but don't have licence right to them) and in text file with lists importet like python module.
 TKinter is used for GUI
