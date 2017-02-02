@@ -94,5 +94,6 @@ func _ready():
 	get_node("ok").connect("pressed",self,"ok")
 	# Called every time the node is added to the scene.
 	# Initialization here
+	randomize()
 	pass
 
