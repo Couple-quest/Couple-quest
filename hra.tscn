@@ -22,10 +22,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 45.0
-margin/top = 6.0
-margin/right = 273.0
-margin/bottom = 49.0
+margin/left = 66.0
+margin/top = 24.0
+margin/right = 294.0
+margin/bottom = 67.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -125,10 +125,9 @@ max_lines_visible = -1
 
 [node name="popend" type="PopupDialog" parent="."]
 
-visibility/blend_mode = 3
 visibility/light_mask = 0
 focus/ignore_mouse = false
-focus/stop_mouse = true
+focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 67.0
@@ -157,21 +156,5 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-[node name="fant1" type="Button" parent="popend"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 454.0
-margin/top = 285.0
-margin/right = 654.0
-margin/bottom = 323.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Pokračovat"
-flat = false
 
 
