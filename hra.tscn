@@ -59,7 +59,7 @@ margin/top = 90.0
 margin/right = 370.0
 margin/bottom = 104.0
 custom_colors/font_color = Color( 1, 0.402344, 0.402344, 1 )
-text = "tst"
+text = "Ona"
 align = 2
 percent_visible = 1.0
 lines_skipped = 0
@@ -75,7 +75,7 @@ margin/left = 380.0
 margin/top = 90.0
 margin/right = 420.0
 margin/bottom = 104.0
-text = "tst1"
+text = "hraje"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -92,7 +92,7 @@ margin/top = 90.0
 margin/right = 470.0
 margin/bottom = 104.0
 custom_colors/font_color = Color( 0.873779, 0.816406, 1, 1 )
-text = "tst2"
+text = "On"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -125,6 +125,7 @@ max_lines_visible = -1
 
 [node name="popend" type="PopupDialog" parent="."]
 
+visibility/visible = false
 visibility/light_mask = 0
 focus/ignore_mouse = false
 focus/stop_mouse = false

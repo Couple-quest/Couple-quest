@@ -1,21 +1,17 @@
 extends Panel
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 var hraje = "On"
 var faze = "I"
-var karta = 2
+var karta
 var scoreOn = 0
 var scoreOna = 0
-var vyberOn = []
-var vyberOna = []
+var vyberOn
+var vyberOna
 var minulafaze = "start"
 var path = "cs"
-var ukol = ""
+var ukol
 var end = "ne"
 var je
-
 
 func kolo(): #old_ok
 	get_node("hraje").set_text(hraje)
@@ -26,11 +22,11 @@ func kolo(): #old_ok
 	get_node("on").set_text(str(scoreOn))
 	get_node("ona").set_text(str(scoreOna))
 
-func ok():
+func ok(): ##button #tlačítko "Splněno"
 	bod()
 	kolo()
 
-func jefaze(): #set phase of game to "faze"
+func jefaze(): #set phase of game to "faze" #vybárá fázy
 	minulafaze=faze
 	if (scoreOn > 6) or (scoreOna > 6):
 		faze = "R"
@@ -41,22 +37,22 @@ func jefaze(): #set phase of game to "faze"
 	print(faze)
 
 func balicek(): #set card deck ## zjistí dostupné karty a obnoví balíček při změně fází
-	if not(faze==minulafaze):
+	if not(faze==minulafaze): ##new phase = new deck
 		je=cs.get(faze + "Ona")
 		vyberOna=range(1, (je.size()))
 		je=cs.get(faze + "On")
 		vyberOn=range(1, (je.size()))
 		print("nov������ý balíček oba")
-	elif vyberOna.size()==0:
+	elif vyberOna.size()==0: #empty deck Ona
 		je=cs.get(faze + "Ona")
 		vyberOna=range(1, (je.size()))
 		print("nový balíček ona")
-	elif vyberOn.size()==0:
+	elif vyberOn.size()==0: #empty deck On
 		je = cs.get(faze + "On")
 		vyberOn=range(1, (je.size()))
 		print("nový balíček On")
 
-func tik(): #old_kolo
+func tik(): #old_kolo ## roound cycle ##konec tahu
 	if hraje == "On":
 		karta = (randi() % vyberOn.size())
 		vyberOn.remove(karta)
@@ -68,17 +64,16 @@ func tik(): #old_kolo
 		ukol = cs.get(faze + hraje)[karta]
 		hraje = "On"
 	get_node("screen/ukol").set_text(str(ukol))
-	randomize()
+	randomize() #randomseed
 	print("tak")
-	
+
 func bod(): #add score ##počítání bodů
 	if hraje == "Ona":
 		scoreOna+=1
 	else:
 		scoreOn+=1
-		
 
-func end():
+func end(): ##check end conditions
 	if scoreOn | scoreOna > 16:
 		if end == "ne":
 			print("end")
@@ -92,8 +87,5 @@ func _ready():
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
 	get_node("ok").connect("pressed",self,"ok")
-	# Called every time the node is added to the scene.
-	# Initialization here
 	randomize()
 	pass
-
