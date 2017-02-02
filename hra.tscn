@@ -125,6 +125,7 @@ max_lines_visible = -1
 
 [node name="popend" type="PopupDialog" parent="."]
 
+visibility/visible = false
 visibility/light_mask = 0
 focus/ignore_mouse = false
 focus/stop_mouse = false
