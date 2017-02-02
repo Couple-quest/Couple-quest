@@ -15,6 +15,7 @@ var vyberOna = []
 var minulafaze = "start"
 var path = "cs"
 var ukol = ""
+var end = "ne"
 
 
 func kolo(): #old_ok
@@ -78,11 +79,13 @@ func bod():
 
 func end():
 	if scoreOn | scoreOna > 16:
-		print("end")
-		get_node("popend").popup()
-		var odmena =cs.get(hraje)
-		karta = (randi() % odmena.size())
-		get_node("popend/odmena").set_text(str(odmena[karta]))
+		if end == "ne":
+			print("end")
+			get_node("popend").popup()
+			var odmena =cs.get(hraje)
+			karta = (randi() % odmena.size())
+			get_node("popend/odmena").set_text(str(odmena[karta]))
+			end = "ano"
 
 func _ready():
 	balicek()
