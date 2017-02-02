@@ -18,3 +18,9 @@ Player which first gain 15 points are rewarded with task from _Ona_ (for him) or
 Task modul would by selected by varibale`data` in script, these curently isn't implemented. (curently have czech and english tasks in [cs](/data/cs.gd) and [en](/data/en.gd))
 
 ##### see [issues](https://github.com/Clonewayx/Couple-quest/issues)
+
+### In game screenshots
+
+<img src="/screen_menu.png">
+<img src="/screen_game.png">
+<img src="/screen_end.png">
