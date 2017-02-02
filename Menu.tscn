@@ -12,12 +12,12 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 800.0
-margin/bottom = 602.0
+margin/bottom = 600.0
 script/script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 399.858, 341.218 )
+transform/pos = Vector2( 399.858, 345.74 )
 transform/scale = Vector2( 1.15351, 1.15351 )
 texture = ExtResource( 2 )
 
@@ -29,8 +29,8 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 40.0
 margin/top = 15.0
-margin/right = 327.0
-margin/bottom = 68.0
+margin/right = 320.0
+margin/bottom = 65.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -43,10 +43,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 535.0
-margin/top = 22.0
-margin/right = 758.0
-margin/bottom = 60.0
+margin/left = 480.0
+margin/top = 15.0
+margin/right = 760.0
+margin/bottom = 65.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
