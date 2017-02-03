@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://S.tex" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="Panel" type="Panel"]
 
@@ -52,5 +53,39 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Možnosti"
 flat = false
+
+[node name="Container" type="Container" parent="."]
+
+visibility/blend_mode = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 47.0
+margin/top = 532.0
+margin/right = 481.0
+margin/bottom = 576.0
+
+[node name="Sprite 2" type="Sprite" parent="Container"]
+
+transform/pos = Vector2( 37.5993, 19.3299 )
+transform/scale = Vector2( 0.603848, 0.603848 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 68.0
+margin/top = -22.0
+margin/right = 370.0
+margin/bottom = 63.0
+text = "Created with Godot Engine"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
