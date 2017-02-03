@@ -1,4 +1,4 @@
-# Couple-quest <img src="https://github.com/Clonewayx/Couple-quest/blob/master/slice/hra.png" align="right">
+# Couple-quest <img src="hra.png" align="right">
 >### [Latest release](https://github.com/Clonewayx/Couple-quest/releases/latest)
 
 Simple "board-like" game for couples.
