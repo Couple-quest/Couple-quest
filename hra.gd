@@ -1,6 +1,7 @@
 extends Panel
 
-var hraje = "On"
+var chosse = randi() % 2
+var hraje
 var faze = "I"
 var karta
 var scoreOn = 0
@@ -88,4 +89,9 @@ func _ready():
 	get_node("fant").connect("pressed",self,"kolo")
 	get_node("ok").connect("pressed",self,"ok")
 	randomize()
+	var choose = randi() % 2
+	if choose == 1:
+		hraje = "On"
+	else:
+		hraje = "Ona"
 	pass
