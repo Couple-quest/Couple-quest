@@ -8,7 +8,7 @@ var scoreOna = 0
 var vyberOn
 var vyberOna
 var minulafaze = "start"
-var path = en
+var path = test
 var ukol
 var end = "ne"
 var je

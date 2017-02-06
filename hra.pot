@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: <define>\n"
-"POT-Creation-Date: 2017-2-6 12:530000\n"
+"POT-Creation-Date: 2017-2-6 16:150000\n"
 "Language-Team: <define>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,14 +23,14 @@ msgstr ""
 msgid "Ona"
 msgstr ""
 
-msgid "Splněno"
-msgstr ""
-
-msgid "Fant"
+msgid "nenačetl se úkol"
 msgstr ""
 
 msgid "nenačetla se odměna :-("
 msgstr ""
 
-msgid "nenačetl se úkol"
+msgid "Fant"
+msgstr ""
+
+msgid "Splněno"
 msgstr ""

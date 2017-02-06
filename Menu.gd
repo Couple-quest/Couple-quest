@@ -1,7 +1,7 @@
 extends Panel
 var data = cs
 var konec = 16
-var lang = "en"
+var lang = "cs"
 
 func options():
 	get_node("set/Možnosti").popup()
