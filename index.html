@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 	<meta charset="utf-8" />
-	<title>Couple quest</title>
+	<title>Couple-quest</title>
 	
 	<style type="text/css">
 		body {
@@ -366,15 +366,15 @@
 		Presentation.setStatus("Downloading...");
 
 	//]]></script>
-	<script type="text/javascript" src="Couple_questfs.js"></script>
+	<script type="text/javascript" src="indexfs.js"></script>
 	<script>
 		(function() {
 			var script = document.createElement('script');
-			script.src = "$GODOT_ASM";
+			script.src = "index.asm.js";
 			script.onload = function() {
 				setTimeout(function() {
 					(function() {
-						var memoryInitializer = 'Couple_quest.mem';
+						var memoryInitializer = 'index.mem';
 						if (typeof Module.locateFile === 'function') {
 							memoryInitializer = Module.locateFile(memoryInitializer);
 						} else if (Module.memoryInitializerPrefixURL) {
@@ -387,7 +387,7 @@
 					})();
 
 					var script = document.createElement('script');
-					script.src = "Couple_quest.js";
+					script.src = "index.js";
 					document.body.appendChild(script);
 				}, 1); // delaying even 1ms is enough to allow compilation memory to be reclaimed
 			};
