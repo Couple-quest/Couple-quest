@@ -20,6 +20,7 @@ func kolo(): #old_ok
 	balicek()
 	tik() #old_kolo
 	end()
+	get_node("/root/Menu").konec
 	get_node("on").set_text(str(scoreOn))
 	get_node("ona").set_text(str(scoreOna))
 

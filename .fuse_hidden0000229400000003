@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://hra.gd" type="Script" id=1]
-[ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://K.tex" type="Texture" id=3]
+[ext_resource path="res://K.tex" type="Texture" id=2]
+[ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
 
 [node name="Panel" type="Panel"]
 
@@ -26,7 +26,6 @@ margin/left = 40.0
 margin/top = 15.0
 margin/right = 320.0
 margin/bottom = 65.0
-custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -43,7 +42,6 @@ margin/left = 480.0
 margin/top = 15.0
 margin/right = 760.0
 margin/bottom = 65.0
-custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -104,7 +102,7 @@ max_lines_visible = -1
 transform/pos = Vector2( 400, 365 )
 transform/scale = Vector2( 1.05864, 1.05864 )
 z/relative = false
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="ukol" type="Label" parent="screen"]
 
@@ -116,7 +114,7 @@ margin/left = -320.0
 margin/top = -190.0
 margin/right = 320.0
 margin/bottom = 50.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "nenačetl se úkol"
 align = 1
 valign = 1
@@ -151,7 +149,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 0.0
 margin/bottom = 0.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 text = "nenačetla se odměna :-("
 align = 1
 valign = 1
