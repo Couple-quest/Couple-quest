@@ -92,7 +92,6 @@ max_lines_visible = -1
 
 [node name="balicek" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -124,7 +123,7 @@ text = "cs"
 flat = false
 align = 0
 selected = 0
-items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
+items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
 
 [node name="delka" type="Label" parent="set/Možnosti"]
 
@@ -179,7 +178,6 @@ max_lines_visible = -1
 
 [node name="jazyk" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2

@@ -8,7 +8,8 @@ var scoreOna = 0
 var vyberOn
 var vyberOna
 var minulafaze = "start"
-var path = test
+var cil = global.fin
+var path = alternative
 var ukol
 var end = "ne"
 var je
@@ -28,11 +29,11 @@ func ok(): ##button #tlačítko "Splněno"
 
 func jefaze(): #set phase of game to "faze" #vybárá fázy
 	minulafaze=faze
-	if (scoreOn > 6) or (scoreOna > 6):
+	if (scoreOn > cil/3) or (scoreOna > cil/3):
 		faze = "R"
-	if (scoreOn > 10) or (scoreOna > 10):
+	if (scoreOn > (cil/3)*2) or (scoreOna > (cil/3)*2):
 		faze = "V"
-	if (scoreOn < 6) or (scoreOna < 6):
+	if (scoreOn < cil/3) or (scoreOna < cil/3):
 		faze = "I"
 	print(faze)
 
@@ -74,7 +75,7 @@ func bod(): #add score ##počítání bodů
 		scoreOn+=1
 
 func end(): ##check end conditions
-	if scoreOn | scoreOna > 16:
+	if scoreOn > cil or scoreOna > cil:
 		if end == "ne":
 			print("end")
 			get_node("popend").popup()
@@ -84,6 +85,10 @@ func end(): ##check end conditions
 			end = "ano"
 
 func _ready():
+	if global.balik == "basic":
+		path = basic
+	if global.balik == "alternative":
+		path = alternative
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
 	get_node("ok").connect("pressed",self,"ok")

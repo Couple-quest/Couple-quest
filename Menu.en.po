@@ -26,6 +26,9 @@ msgstr "16"
 msgid "Délka hry"
 msgstr "Game lenght"
 
+msgid "Jazyk"
+msgstr "Language"
+
 msgid "en"
 msgstr "en"
 
