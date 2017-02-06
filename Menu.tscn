@@ -90,48 +90,69 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label1" type="Label" parent="set/Možnosti"]
+[node name="balicek" type="Label" parent="set/Možnosti"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 56.0
-margin/top = 89.0
-margin/right = 181.0
-margin/bottom = 118.0
+margin/top = 91.0
+margin/right = 237.0
+margin/bottom = 120.0
 custom_fonts/font = ExtResource( 3 )
 text = "Balíček karet"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="Label" parent="set/Možnosti"]
+[node name="OptionButton" type="OptionButton" parent="set/Možnosti/balicek"]
 
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 293.0
+margin/top = -14.0
+margin/right = 575.0
+margin/bottom = 41.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "cs"
+flat = false
+align = 0
+selected = 0
+items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
+
+[node name="delka" type="Label" parent="set/Možnosti"]
+
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 63.0
-margin/top = 259.0
-margin/right = 244.0
-margin/bottom = 288.0
+margin/left = 67.0
+margin/top = 187.0
+margin/right = 248.0
+margin/bottom = 216.0
 custom_fonts/font = ExtResource( 3 )
 text = "Délka hry"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="HScrollBar" type="HScrollBar" parent="set/Možnosti"]
+[node name="HScrollBar" type="HScrollBar" parent="set/Možnosti/delka"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 369.0
-margin/top = 255.0
-margin/right = 600.0
-margin/bottom = 289.0
+margin/left = 298.0
+margin/top = -4.0
+margin/right = 529.0
+margin/bottom = 30.0
 range/min = 6.0
 range/max = 30.0
 range/step = 1.0
@@ -141,7 +162,7 @@ range/exp_edit = false
 range/rounded = false
 custom_step = -1.0
 
-[node name="curLen" type="Label" parent="set/Možnosti/HScrollBar"]
+[node name="curLen" type="Label" parent="set/Možnosti/delka/HScrollBar"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -156,24 +177,41 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="OptionButton" type="OptionButton" parent="set/Možnosti"]
+[node name="jazyk" type="Label" parent="set/Možnosti"]
+
+editor/display_folded = true
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 76.0
+margin/top = 274.0
+margin/right = 257.0
+margin/bottom = 303.0
+custom_fonts/font = ExtResource( 3 )
+text = "Jazyk"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="OptionButton" type="OptionButton" parent="set/Možnosti/jazyk"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 349.0
-margin/top = 75.0
-margin/right = 631.0
-margin/bottom = 130.0
+margin/left = 273.0
+margin/top = -18.0
+margin/right = 555.0
+margin/bottom = 37.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Item 0"
+text = "cs"
 flat = false
 align = 0
 selected = 0
-items = [ "cs", null, false, -1, null, "en", null, false, 0, null ]
+items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
 
 [node name="Container" type="Container" parent="."]
 
@@ -204,7 +242,7 @@ margin/top = 5.0
 margin/right = 443.0
 margin/bottom = 34.0
 custom_fonts/font = ExtResource( 3 )
-text = "Created with Godot Engine"
+text = "Vytvořeno v Godot Engine"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0

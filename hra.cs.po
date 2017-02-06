@@ -1,0 +1,36 @@
+# Translation Strings Dump.
+# Created By.
+# 	Godot Engine v2.1.2.stable.official (c) 2008-2017 Juan Linietsky, Ariel Manzur.
+# From Scene: 
+# 	res://hra.tscn
+
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: <define>\n"
+"POT-Creation-Date: 2017-2-6 12:530000\n"
+"Language-Team: <define>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "On"
+msgstr "On"
+
+msgid "hraje"
+msgstr "hraje"
+
+msgid "Ona"
+msgstr "Ona"
+
+msgid "Splněno"
+msgstr "Splněno"
+
+msgid "Fant"
+msgstr "Fant"
+
+msgid "nenačetla se odměna :-("
+msgstr "nenačetla se odměna :-("
+
+msgid "nenačetl se úkol"
+msgstr "nenačetl se úkol"

@@ -1,5 +1,4 @@
 extends Panel
-
 var chosse = randi() % 2
 var hraje
 var faze = "I"
@@ -9,7 +8,7 @@ var scoreOna = 0
 var vyberOn
 var vyberOna
 var minulafaze = "start"
-var path = en #choose deck
+var path = en
 var ukol
 var end = "ne"
 var je
