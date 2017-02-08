@@ -1,5 +1,5 @@
 # Couple-quest <img src="hra.png" align="right">
->### [Latest release](https://github.com/Clonewayx/Couple-quest/releases/latest)
+>### [Latest release](https://github.com/Couple-quest/Couple-quest/releases/latest)
 
 Simple "board-like" game for couples.
 
@@ -17,7 +17,7 @@ Player which first gain 15 points are rewarded with task from _Ona_ (for him) or
 
 Task modul would by selected by varibale`data` in script, these curently isn't implemented. (curently have czech and english tasks in [cs](/data/cs.gd) and [en](/data/en.gd))
 
-##### see [issues](https://github.com/Clonewayx/Couple-quest/issues)
+##### see [issues](https://github.com/Couple-quest/Couple-quest/issues)
 
 ### In game screenshots
 
