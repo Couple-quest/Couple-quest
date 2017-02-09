@@ -1,3 +1,19 @@
+#    Card game fo couple's foreplay.
+#    Copyright (C) 2017  Couple-quest
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. If not, see <http://www.gnu.org/licenses/>.
+    
 extends Panel
 var chosse = randi() % 2
 var hraje
@@ -23,11 +39,11 @@ func kolo(): #old_ok
 	get_node("on").set_text(str(scoreOn))
 	get_node("ona").set_text(str(scoreOna))
 
-func ok(): ##button #tlačítko "Splněno"
+func ok(): ##button #tlaÄÃ­tko "SplnÄ›no"
 	bod()
 	kolo()
 
-func jefaze(): #set phase of game to "faze" #vybárá fázy
+func jefaze(): #set phase of game to "faze" #vybÃ¡rÃ¡ fÃ¡zy
 	minulafaze=faze
 	if (scoreOn > cil/3) or (scoreOna > cil/3):
 		faze = "R"
@@ -37,21 +53,21 @@ func jefaze(): #set phase of game to "faze" #vybárá fázy
 		faze = "I"
 	print(faze)
 
-func balicek(): #set card deck ## zjistí dostupné karty a obnoví balíček při změně fází
+func balicek(): #set card deck ## zjistÃ­ dostupnÃ© karty a obnovÃ­ balÃ­Äek pÅ™i zmÄ›nÄ› fÃ¡zÃ­
 	if not(faze==minulafaze): ##new phase = new deck
 		je=path.get(faze + "Ona")
 		vyberOna=range(1, (je.size()))
 		je=path.get(faze + "On")
 		vyberOn=range(1, (je.size()))
-		print("nov������ý balíček oba")
+		print("novü†¼²„Ã½ balÃ­Äek oba")
 	elif vyberOna.size()==0: #empty deck Ona
 		je=path.get(faze + "Ona")
 		vyberOna=range(1, (je.size()))
-		print("nový balíček ona")
+		print("novÃ½ balÃ­Äek ona")
 	elif vyberOn.size()==0: #empty deck On
 		je = path.get(faze + "On")
 		vyberOn=range(1, (je.size()))
-		print("nový balíček On")
+		print("novÃ½ balÃ­Äek On")
 
 func tik(): #old_kolo ## roound cycle ##konec tahu
 	if hraje == "On":
@@ -68,7 +84,7 @@ func tik(): #old_kolo ## roound cycle ##konec tahu
 	randomize() #randomseed
 	print("tak")
 
-func bod(): #add score ##počítání bodů
+func bod(): #add score ##poÄÃ­tÃ¡nÃ­ bodÅ¯
 	if hraje == "Ona":
 		scoreOna+=1
 	else:
