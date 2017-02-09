@@ -27,3 +27,23 @@ Player which first gain 15 points are rewarded with task from _Ona_ (reward for 
 Task modul is selected by varibale`data` in script. (curently have czech and english tasks in [cs](/slice/cs.py) and [en](/slice/en.py) + experimental blank images in [img/](/slice/img))
 
 ##### see [issues](../../issues)
+
+
+# GPL-3.0
+
+
+    Card game fo couple's foreplay.
+    Copyright (C) 2017  Couple-quest
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
