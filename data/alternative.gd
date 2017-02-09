@@ -1,3 +1,19 @@
+#    Card game fo couple's foreplay.
+#    Copyright (C) 2017  Couple-quest
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 extends Node
 #Ishare is same for both
 var Ishare = ["Describe the riskiest place you have performed a sexual act", "Describe the best sexual experience you have ever had.", "What is your favorite sex position and describe in detail why.", "Describe what you enjoy hearing from your partner when you have sex.", "Describe the sexiest way your partner could seduce you.", "What do you think of while we are having sex?", "If we could have sex anywhere in public and not get caught, tell me where it would be.", "Describe something that your partner does that really turns you on.", "Describe to me in detail the oral technique you like to use on me.", "Describe to me in detail the oral technique you like me to use on you.", "Which of our friends are you most attracted to, explain.", "Which celebrity would you most want to have sex with? Do you think your partner would give you a pass?", "Describe a sexual fantasy that doesn’t have to be realistic.", "If you could go to any time period in history and have a fling with your partner in that attire, when would it be, describe.", "If you could do whatever you wanted to me what would it be?", "Would you ever have a threesome, with whom?", "Would you find watching another couple have sex exhilarating?", "What is the closest duration between two people that you have ever made out with or more, describe.", "Describe what an orgasm feels like to you.", "What is your favorite place to be kissed?", "What is the worst sexual experience you have had?", "Where is the strangest place you have ever had sex?", "Who was the first person you ever did a sexual act with and what did you do? Describe how it was hot, awkward, etc.", "If you were a stripper what would be your name and signature move?", "If you were an escort what would you charge and for what?", "Does size matter (dick, breasts, labia)", "Do you prefer a partner who is boisterous or silent?", "Would you ever have sex for money? How much?", "What is your strangest sexual fantasy?", "What is the most orgasms you have ever had in a single day?", "If you could role-play anything what would it be?"]
