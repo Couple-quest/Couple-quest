@@ -42,6 +42,7 @@ flat = false
 
 [node name="set" type="Button" parent="."]
 
+editor/display_folded = true
 anchor/left = 3
 anchor/right = 3
 focus/ignore_mouse = false
@@ -119,7 +120,7 @@ margin/bottom = 41.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "cs"
+text = "alternative"
 flat = false
 align = 0
 selected = 0
@@ -213,6 +214,7 @@ items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
 
 [node name="Container" type="Container" parent="."]
 
+editor/display_folded = true
 visibility/blend_mode = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
