@@ -100,6 +100,13 @@ func end(): ##check end conditions
 			get_node("popend/odmena").set_text(str(odmena[karta]))
 			end = "ano"
 
+func restart():
+	var res = get_node("Restart").get_item_text(res)
+	print("restart")
+	if res == "Yes":
+		get_tree().reload_current_scene()
+
+
 func _ready():
 	if global.balik == "basic":
 		path = basic
@@ -108,6 +115,7 @@ func _ready():
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
 	get_node("ok").connect("pressed",self,"ok")
+	get_node("Restart").connect("item_selected",self,"restart")
 	randomize()
 	var choose = randi() % 2
 	if choose == 1:

@@ -28,10 +28,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 359.0
-margin/top = 265.0
-margin/right = -445.0
-margin/bottom = -335.0
+margin/left = 400.0
+margin/top = 300.0
+margin/right = -404.0
+margin/bottom = -300.0
 custom_styles/panel = SubResource( 1 )
 script/script = ExtResource( 1 )
 
@@ -63,7 +63,6 @@ flat = false
 
 [node name="set" type="Button" parent="."]
 
-editor/display_folded = true
 visibility/blend_mode = 1
 anchor/left = 3
 anchor/right = 3
@@ -84,7 +83,6 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
-visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
