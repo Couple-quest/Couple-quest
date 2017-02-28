@@ -20,14 +20,18 @@ draw_bg = true
 
 [node name="Panel" type="Panel"]
 
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 0.0
-margin/right = 804.0
-margin/bottom = 600.0
+margin/left = 359.0
+margin/top = 265.0
+margin/right = -445.0
+margin/bottom = -335.0
 custom_styles/panel = SubResource( 1 )
 script/script = ExtResource( 1 )
 
@@ -40,13 +44,15 @@ texture = ExtResource( 2 )
 [node name="start" type="Button" parent="."]
 
 visibility/blend_mode = 1
+anchor/left = 1
+anchor/right = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 40.0
+margin/left = 764.0
 margin/top = 15.0
-margin/right = 320.0
+margin/right = 484.0
 margin/bottom = 65.0
 custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
