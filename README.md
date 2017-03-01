@@ -20,6 +20,7 @@ Task deck is selceted in game menu, curently we have czech and english tasks in 
 Tranaslations are stored in *file*.*languecode*.po like [`Menu.en.po`](/Menu.en.po) (and templates as [`alternative.pot`](/data/alternative.pot))
 ### In game screenshots
 <img src="/screen_menu.png">
+<img src="/screen_options.png">
 <img src="/screen_game.png">
 <img src="/screen_end.png">
 
