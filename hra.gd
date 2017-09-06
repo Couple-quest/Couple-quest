@@ -100,12 +100,16 @@ func end(): ##check end conditions
 			get_node("popend/odmena").set_text(str(odmena[karta]))
 			end = "ano"
 
-func restart():
-	var res = get_node("Restart").get_item_text(res)
-	print("restart")
-	if res == "Yes":
-		get_tree().reload_current_scene()
+func quit(): #quit game and open menu
+	get_tree().change_scene("res://Menu.tscn")
+	
+func no(): #back to game
+	get_node("Quit?").hide()
 
+func restart():
+	get_node("Quit?").popup()
+	get_node("Quit?/Ano").connect("pressed",self,"quit")
+	get_node("Quit?/ne").connect("pressed",self,"no")
 
 func _ready():
 	if global.balik == "basic":
@@ -115,7 +119,7 @@ func _ready():
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
 	get_node("ok").connect("pressed",self,"ok")
-	get_node("Restart").connect("item_selected",self,"restart")
+	get_node("Restart").connect("pressed",self,"restart")
 	randomize()
 	var choose = randi() % 2
 	if choose == 1:
@@ -123,3 +127,7 @@ func _ready():
 	else:
 		hraje = "Ona"
 	pass
+
+
+func _on_Restart_pressed():
+	pass # replace with function body

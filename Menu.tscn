@@ -83,6 +83,7 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

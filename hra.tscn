@@ -90,9 +90,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 380.0
-margin/top = 90.0
+margin/top = 89.0
 margin/right = 420.0
-margin/bottom = 104.0
+margin/bottom = 103.0
 text = "hraje"
 align = 1
 percent_visible = 1.0
@@ -176,7 +176,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Restart" type="MenuButton" parent="."]
+[node name="Restart" type="Button" parent="."]
 
 visibility/blend_mode = 1
 visibility/light_mask = 0
@@ -194,6 +194,71 @@ enabled_focus_mode = 0
 shortcut = null
 text = "Restart"
 flat = false
-items = [ "Yes", null, false, false, false, -1, 0, null, "", false, "No", null, false, false, false, -1, 0, null, "", false ]
+
+[node name="Quit?" type="PopupPanel" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 138.0
+margin/top = 184.0
+margin/right = 636.0
+margin/bottom = 346.0
+popup/exclusive = false
+
+[node name="lost?" type="Label" parent="Quit?"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 101.0
+margin/top = 11.0
+margin/right = 432.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 2 )
+text = "Návrat do menu\?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Ano" type="Button" parent="Quit?"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 67.0
+margin/top = 77.0
+margin/right = 215.0
+margin/bottom = 122.0
+custom_fonts/font = ExtResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Ano"
+flat = false
+
+[node name="ne" type="Button" parent="Quit?"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 317.0
+margin/top = 79.0
+margin/right = 457.0
+margin/bottom = 128.0
+custom_fonts/font = ExtResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Zpět"
+flat = false
+
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
 
 
