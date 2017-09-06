@@ -22,6 +22,9 @@ var lang = "cs"
 func options():
 	get_node("set/Možnosti").popup()
 
+func quit():
+	get_tree().quit()
+
 func start():
 	get_tree().change_scene("res://hra.tscn")
 
@@ -32,6 +35,7 @@ func _ready():
 	get_node("set/Možnosti/jazyk/OptionButton").connect("item_selected",self,"jazyk")
 	get_node("set/Možnosti/jazyk/OptionButton").select(global.langid)
 	get_node("set/Možnosti/balicek/OptionButton").connect("item_selected",self,"balik")
+	get_node("exit").connect("pressed",self,"quit")
 	
 func hChange(konec):
 	get_node("set/Možnosti/delka/HScrollBar/curLen").set_text(str(konec))
