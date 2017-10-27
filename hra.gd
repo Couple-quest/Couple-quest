@@ -127,3 +127,4 @@ func _ready():
 	else:
 		hraje = "Ona"
 	pass
+

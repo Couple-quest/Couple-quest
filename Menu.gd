@@ -55,3 +55,4 @@ func balik(data):
 
 func _on_LinkButton_pressed():
 	OS.shell_open("https://github.com/Couple-quest/Couple-quest")
+	pass
