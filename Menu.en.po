@@ -40,3 +40,6 @@ msgstr "Card deck"
 
 msgid "cs"
 msgstr "cs"
+
+msgid "Konec"
+msgstr "Quit"

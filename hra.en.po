@@ -34,3 +34,15 @@ msgstr "Can't load reward :-("
 
 msgid "Fant"
 msgstr "Dare"
+
+msgid "Zpět"
+msgstr "Back"
+
+msgid "Návrat do menu\?"
+msgstr "Back to menu\?"
+
+msgid "Ano"
+msgstr "Yes"
+
+msgid "Ukončit"
+msgstr "Close"
