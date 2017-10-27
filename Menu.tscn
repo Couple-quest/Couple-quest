@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://S.tex" type="Texture" id=2]
 [ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://new_theme.tres" type="Theme" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -83,15 +84,17 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
-visibility/visible = false
+anchor/left = 1
+anchor/right = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -449.0
-margin/top = 104.0
-margin/right = 271.0
-margin/bottom = 504.0
+theme/theme = ExtResource( 4 )
+margin/left = 759.0
+margin/top = 135.0
+margin/right = 39.0
+margin/bottom = 535.0
 popup/exclusive = false
 items = [  ]
 hide_on_item_selection = false
@@ -149,7 +152,6 @@ items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
 
 [node name="delka" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -171,9 +173,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 298.0
-margin/top = -4.0
+margin/top = -6.0
 margin/right = 529.0
-margin/bottom = 30.0
+margin/bottom = 28.0
 range/min = 6.0
 range/max = 30.0
 range/step = 1.0
@@ -250,7 +252,7 @@ margin/bottom = 576.0
 
 transform/pos = Vector2( 37.5993, 19.3299 )
 transform/scale = Vector2( 0.603848, 0.603848 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Container"]
 
@@ -271,6 +273,7 @@ max_lines_visible = -1
 
 [node name="exit" type="Button" parent="."]
 
+visibility/blend_mode = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

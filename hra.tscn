@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://hra.gd" type="Script" id=1]
 [ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://K.tex" type="Texture" id=3]
+[ext_resource path="res://new_theme.tres" type="Theme" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -143,12 +144,13 @@ max_lines_visible = -1
 
 [node name="popend" type="PopupDialog" parent="."]
 
-visibility/visible = false
+visibility/opacity = 0.95
 visibility/light_mask = 0
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 4 )
 margin/left = 60.0
 margin/top = 260.0
 margin/right = 740.0
@@ -164,9 +166,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
+margin/top = 1.0
 margin/right = 0.0
-margin/bottom = 0.0
+margin/bottom = -1.0
 custom_fonts/font = ExtResource( 2 )
 text = "nenačetla se odměna :-("
 align = 1
@@ -198,10 +200,12 @@ flat = false
 [node name="Quit?" type="PopupPanel" parent="."]
 
 visibility/visible = false
+visibility/blend_mode = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 4 )
 margin/left = 138.0
 margin/top = 184.0
 margin/right = 636.0
@@ -219,7 +223,7 @@ margin/top = 11.0
 margin/right = 432.0
 margin/bottom = 46.0
 custom_fonts/font = ExtResource( 2 )
-text = "Návrat do menu\?"
+text = "Návrat do menu?"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
