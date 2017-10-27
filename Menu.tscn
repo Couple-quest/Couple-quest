@@ -84,6 +84,7 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
+visibility/visible = false
 anchor/left = 1
 anchor/right = 1
 focus/ignore_mouse = false
