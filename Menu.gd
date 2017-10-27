@@ -51,3 +51,7 @@ func jazyk(lang):
 func balik(data):
 	var sel = get_node("set/Možnosti/balicek/OptionButton").get_item_text(data)
 	get_node("/root/global").balik = sel
+
+
+func _on_LinkButton_pressed():
+	OS.shell_open("https://github.com/Couple-quest/Couple-quest")

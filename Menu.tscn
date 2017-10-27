@@ -117,6 +117,7 @@ max_lines_visible = -1
 
 [node name="balicek" type="Label" parent="set/Možnosti"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -152,6 +153,7 @@ items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
 
 [node name="delka" type="Label" parent="set/Možnosti"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -202,6 +204,7 @@ max_lines_visible = -1
 
 [node name="jazyk" type="Label" parent="set/Možnosti"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -234,6 +237,24 @@ flat = false
 align = 0
 selected = 0
 items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
+
+[node name="LinkButton" type="LinkButton" parent="set/Možnosti"]
+
+hint/tooltip = "Open in browser"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 571.0
+margin/top = 356.0
+margin/right = 676.0
+margin/bottom = 370.0
+custom_colors/font_color_hover = Color( 1, 0.53125, 0.597168, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.234375, 0.234375, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "About on Github"
 
 [node name="Container" type="Container" parent="."]
 
@@ -287,5 +308,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Quit"
 flat = false
+
+[connection signal="pressed" from="set/Možnosti/LinkButton" to="." method="_on_LinkButton_pressed"]
 
 
