@@ -1,9 +1,22 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://new_theme.tres" type="Theme" id=1]
 [ext_resource path="res://hra.gd" type="Script" id=2]
 [ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://K.tex" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.425781, 0, 0, 1 )
+light_color = Color( 0.427451, 0, 0, 1 )
+dark_color = Color( 0.427451, 0, 0, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
 
 [node name="Panel" type="Panel"]
 
@@ -16,6 +29,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 800.0
 margin/bottom = 600.0
+custom_styles/panel = SubResource( 1 )
 script/script = ExtResource( 2 )
 
 [node name="ok" type="Button" parent="."]
@@ -126,10 +140,12 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -320.0
-margin/top = -190.0
+margin/top = -189.0
 margin/right = 320.0
-margin/bottom = 50.0
+margin/bottom = 51.0
 custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0.867188, 0.867188, 1 )
+custom_constants/shadow_offset_x = 0
 text = "nenačetl se úkol"
 align = 1
 valign = 1
