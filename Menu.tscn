@@ -84,6 +84,7 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
+visibility/visible = false
 anchor/left = 1
 anchor/right = 1
 focus/ignore_mouse = false
@@ -117,7 +118,6 @@ max_lines_visible = -1
 
 [node name="balicek" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -134,6 +134,7 @@ max_lines_visible = -1
 
 [node name="OptionButton" type="OptionButton" parent="set/Možnosti/balicek"]
 
+hint/tooltip = "Karty se kterýmy se bude hrát. [Zatím jednojazyčné: Basic (en) nebo Alternative (cs)]"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -153,7 +154,6 @@ items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
 
 [node name="delka" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -170,6 +170,7 @@ max_lines_visible = -1
 
 [node name="HScrollBar" type="HScrollBar" parent="set/Možnosti/delka"]
 
+hint/tooltip = "Počet splněných karet požadovaných pro získání doměny."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -204,7 +205,6 @@ max_lines_visible = -1
 
 [node name="jazyk" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -221,6 +221,7 @@ max_lines_visible = -1
 
 [node name="OptionButton" type="OptionButton" parent="set/Možnosti/jazyk"]
 
+hint/tooltip = "Jazyk prostředí."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -240,7 +241,7 @@ items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
 
 [node name="LinkButton" type="LinkButton" parent="set/Možnosti"]
 
-hint/tooltip = "Open in browser"
+hint/tooltip = "Otevřít v prohlížeči"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -254,7 +255,7 @@ custom_colors/font_color_pressed = Color( 1, 0.234375, 0.234375, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
-text = "About on Github"
+text = "Víc na Githubu"
 
 [node name="Container" type="Container" parent="."]
 
@@ -295,6 +296,7 @@ max_lines_visible = -1
 [node name="exit" type="Button" parent="."]
 
 visibility/blend_mode = 1
+hint/tooltip = "Konec hry"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -306,7 +308,7 @@ margin/bottom = 570.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Quit"
+text = "Konec"
 flat = false
 
 [connection signal="pressed" from="set/Možnosti/LinkButton" to="." method="_on_LinkButton_pressed"]

@@ -34,6 +34,7 @@ script/script = ExtResource( 1 )
 [node name="ok" type="Button" parent="."]
 
 visibility/blend_mode = 1
+hint/tooltip = "Ukol byl splněn."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -52,6 +53,7 @@ flat = false
 [node name="fant" type="Button" parent="."]
 
 visibility/blend_mode = 1
+hint/tooltip = "Nesplněno, dávám kus oblečení jako fant."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -69,6 +71,7 @@ flat = false
 
 [node name="on" type="Label" parent="."]
 
+hint/tooltip = "Počet jejich splněnýcj úkolů."
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -86,6 +89,7 @@ max_lines_visible = -1
 
 [node name="hraje" type="Label" parent="."]
 
+hint/tooltip = "Kdo je na řadě a má plnit tento úkol."
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -102,6 +106,7 @@ max_lines_visible = -1
 
 [node name="ona" type="Label" parent="."]
 
+hint/tooltip = "Počet jeho splněnýcj úkolů."
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -144,8 +149,10 @@ max_lines_visible = -1
 
 [node name="popend" type="PopupDialog" parent="."]
 
+visibility/visible = false
 visibility/opacity = 0.95
 visibility/light_mask = 0
+hint/tooltip = "Odměna za víězství pro tvůj protějšek."
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -182,6 +189,7 @@ max_lines_visible = -1
 
 visibility/blend_mode = 1
 visibility/light_mask = 0
+hint/tooltip = "Zpět do menu."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -194,7 +202,7 @@ toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Restart"
+text = "Ukončit"
 flat = false
 
 [node name="Quit?" type="PopupPanel" parent="."]
@@ -231,6 +239,7 @@ max_lines_visible = -1
 
 [node name="Ano" type="Button" parent="Quit?"]
 
+hint/tooltip = "do menu"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -248,6 +257,7 @@ flat = false
 
 [node name="ne" type="Button" parent="Quit?"]
 
+hint/tooltip = "hrát dál"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
