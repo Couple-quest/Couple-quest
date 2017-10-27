@@ -84,7 +84,6 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
-visibility/visible = false
 anchor/left = 1
 anchor/right = 1
 focus/ignore_mouse = false
@@ -246,10 +245,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 571.0
-margin/top = 356.0
-margin/right = 676.0
-margin/bottom = 370.0
+margin/left = 497.0
+margin/top = 348.0
+margin/right = 705.0
+margin/bottom = 377.0
 custom_colors/font_color_hover = Color( 1, 0.53125, 0.597168, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.234375, 0.234375, 1 )
 toggle_mode = false

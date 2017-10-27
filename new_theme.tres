@@ -1,8 +1,10 @@
-[gd_resource type="Theme" load_steps=12 format=1]
+[gd_resource type="Theme" load_steps=15 format=1]
 
 [ext_resource path="res://new_styleboxflat.tres" type="StyleBox" id=1]
+[ext_resource path="res://data/DejaVuSans.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -15,7 +17,7 @@ border_size = 3
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -28,7 +30,7 @@ border_size = 3
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=3]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -41,7 +43,7 @@ border_size = 4
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=4]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -54,7 +56,7 @@ border_size = 4
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -67,7 +69,7 @@ border_size = 2
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=6]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -80,7 +82,7 @@ border_size = 4
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=7]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -93,7 +95,7 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=8]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -106,7 +108,7 @@ border_size = 2
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=9]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -119,7 +121,7 @@ border_size = 3
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=10]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -132,8 +134,16 @@ border_size = 3
 border_blend = true
 draw_bg = true
 
+[sub_resource type="DynamicFont" id=11]
+
+font/size = 12
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 2 )
+
 [resource]
 
+default_font = ExtResource( 3 )
 Button/colors/font_color = Color( 0.898438, 0.680847, 0.680847, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.730469, 0.373795, 0.373795, 1 )
@@ -142,9 +152,9 @@ Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = null
-Button/styles/hover = SubResource( 5 )
-Button/styles/normal = SubResource( 6 )
-Button/styles/pressed = SubResource( 7 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 3 )
 CheckBox/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
 CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 CheckBox/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
@@ -165,10 +175,10 @@ HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_hilite = null
 HScrollBar/icons/increment = null
 HScrollBar/icons/increment_hilite = null
-HScrollBar/styles/grabber = SubResource( 2 )
-HScrollBar/styles/grabber_hilite = SubResource( 4 )
-HScrollBar/styles/scroll = SubResource( 3 )
-HScrollBar/styles/scroll_focus = SubResource( 8 )
+HScrollBar/styles/grabber = SubResource( 4 )
+HScrollBar/styles/grabber_hilite = SubResource( 5 )
+HScrollBar/styles/scroll = SubResource( 6 )
+HScrollBar/styles/scroll_focus = SubResource( 7 )
 ItemList/colors/font_color = Color( 0.627451, 0.627451, 0.627451, 1 )
 ItemList/colors/font_color_selected = Color( 1, 1, 1, 1 )
 ItemList/colors/guide_color = Color( 0, 0, 0, 0.1 )
@@ -177,7 +187,7 @@ ItemList/constants/icon_margin = 4
 ItemList/constants/line_separation = 2
 ItemList/constants/vseparation = 2
 ItemList/fonts/font = null
-ItemList/styles/bg = SubResource( 9 )
+ItemList/styles/bg = SubResource( 8 )
 ItemList/styles/bg_focus = null
 ItemList/styles/cursor = null
 ItemList/styles/cursor_unfocused = null
@@ -200,7 +210,7 @@ OptionButton/fonts/font = null
 OptionButton/icons/arrow = null
 OptionButton/styles/disabled = null
 OptionButton/styles/focus = null
-OptionButton/styles/hover = SubResource( 10 )
+OptionButton/styles/hover = SubResource( 9 )
 OptionButton/styles/normal = ExtResource( 1 )
 OptionButton/styles/pressed = null
 PopupMenu/colors/font_color = Color( 0.90625, 0.322144, 0.322144, 1 )
@@ -214,7 +224,12 @@ PopupMenu/icons/checked = null
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
 PopupMenu/styles/hover = null
-PopupMenu/styles/panel = SubResource( 1 )
+PopupMenu/styles/panel = SubResource( 10 )
 PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 0.1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = SubResource( 11 )
 
