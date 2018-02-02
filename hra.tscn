@@ -1,8 +1,36 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://data/DejaVuSans.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://hra.gd" type="Script" id=2]
 [ext_resource path="res://K.tex" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.933594, 0.218811, 0.218811, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = false
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -15,8 +43,88 @@ _sections_unfolded = [ "Font", "Settings" ]
 [sub_resource type="Theme" id=2]
 
 default_font = SubResource( 1 )
+Panel/styles/panel = SubResource( 3 )
+Panel/styles/panelf = null
+Panel/styles/panelnc = null
+_sections_unfolded = [ "Panel", "Panel/styles" ]
 
-[node name="Panel" type="Panel" index="0"]
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.425781, 0, 0, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
+border_blend = true
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 22
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 22
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 20
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 30
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 20
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Panel" type="Panel"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -30,6 +138,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 theme = SubResource( 2 )
+custom_styles/panel = SubResource( 4 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Margin", "Theme" ]
 
@@ -49,6 +158,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
+custom_fonts/font = SubResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -74,6 +184,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
+custom_fonts/font = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -89,10 +200,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 316.0
-margin_top = 81.0
-margin_right = 373.0
-margin_bottom = 110.0
+margin_left = 307.0
+margin_top = 79.0
+margin_right = 364.0
+margin_bottom = 108.0
+rect_scale = Vector2( 1.2, 1.2 )
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
@@ -104,7 +216,7 @@ align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="hraje" type="Label" parent="." index="3"]
 
@@ -112,11 +224,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 375.0
-margin_top = 87.0
-margin_right = 447.0
-margin_bottom = 116.0
-rect_scale = Vector2( 0.7, 0.7 )
+margin_left = 379.0
+margin_top = 76.0
+margin_right = 409.0
+margin_bottom = 91.0
+rect_scale = Vector2( 1.5, 1.5 )
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
@@ -124,10 +236,10 @@ size_flags_horizontal = 2
 size_flags_vertical = 0
 text = "hraje"
 align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
 
 [node name="ona" type="Label" parent="." index="4"]
 
@@ -139,6 +251,7 @@ margin_left = 427.0
 margin_top = 81.0
 margin_right = 467.0
 margin_bottom = 110.0
+rect_scale = Vector2( 1.2, 1.2 )
 rect_pivot_offset = Vector2( 0, 0 )
 mouse_filter = 2
 mouse_default_cursor_shape = 0
@@ -149,7 +262,7 @@ text = "On"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="screen" type="Sprite" parent="." index="5"]
 
@@ -173,6 +286,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 0.867188, 0.867188, 1 )
 custom_constants/shadow_offset_x = 0
 text = "nenačetl se úkol"
@@ -182,9 +296,36 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Restart" type="Button" parent="." index="6"]
+
+light_mask = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 660.0
+margin_top = 80.0
+margin_right = 838.0
+margin_bottom = 148.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 8 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Ukončit"
+flat = false
+align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="popend" type="PopupDialog" parent="." index="6"]
+[node name="popend" type="PopupDialog" parent="." index="7"]
 
 visible = false
 light_mask = 0
@@ -217,6 +358,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
+custom_fonts/font = SubResource( 9 )
 text = "nenačetla se odměna :-("
 align = 1
 valign = 1
@@ -224,32 +366,6 @@ autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
-
-[node name="Restart" type="Button" parent="." index="7"]
-
-light_mask = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 660.0
-margin_top = 80.0
-margin_right = 838.0
-margin_bottom = 148.0
-rect_scale = Vector2( 0.5, 0.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Ukončit"
-flat = false
-align = 1
 _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Quit?" type="PopupPanel" parent="." index="8"]
@@ -286,6 +402,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 0
+custom_fonts/font = SubResource( 10 )
 text = "Návrat do menu?"
 align = 1
 percent_visible = 1.0
