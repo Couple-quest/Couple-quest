@@ -19,8 +19,9 @@ var konec = 16
 var lang = "cs"
 
 func _ready():
+	get_node("set/Možnosti/jazyk/OptionButtonL").select(global.langid)
+	get_node("set/Možnosti/balicek/OptionButton").select(global.balik)
 	pass
-
 
 func _on_LinkButton_pressed():
 	OS.shell_open("https://github.com/Couple-quest/Couple-quest")
@@ -41,11 +42,9 @@ func _on_HScrollBar_value_changed(value):
 func _on_OptionButton_item_selected(ID):
 	get_node("/root/global").balik = ID
 
-
-func _on_OptionButtonL_item_selected( ID ):
-	var sel = get_node("set/Možnosti/jazyk/OptionButton").get_item_text(ID)
+func _on_OptionButtonL_item_selected(ID):
+	var sel = get_node("set/Možnosti/jazyk/OptionButtonL").get_item_text(ID)
 	get_node("/root/global").jazyk = sel
 	get_node("/root/global").langid = ID
-	TranslationServer.set_locale(sel)
-	get_tree().reload_current_scene()
-	get_node("set/Možnosti/jazyk/OptionButton").select(global.langid)
+	TranslationServer.set_locale(sel)	
+	
