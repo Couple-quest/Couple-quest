@@ -13,7 +13,7 @@ In script are tasks sorted in 8 separate list, 4 for each gender.
 Game have three phases I > R > V. (_IOn_, _ROn_, _VOn_ are tasks for him) (_IOna_, _ROna_, _VOna_ are tasks for her)
 Player which first gain 15 points are rewarded with task from _Ona_ (for him) or _On_ (for her).
 
-Task deck is selceted in game menu, curently we have czech and english tasks in [cs](/data/cs.gd) and [en](/data/en.gd) (both wait's to translation vica versa)
+Task deck is selceted in game menu, curently we have czech and english tasks in [basic](/data/basic.gd) and [alternative](/data/alternative.gd) (both wait's to translation vica versa)
 
 #### see [issues](../../issues)
 #### translate PO files 
