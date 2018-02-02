@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+run/main_scene="res://Menu.tscn"
+icon="res://hra.png"
+main_scene="res://Menu.tscn"
+name="Couple quest"
+
+[autoload]
+
+alternative="*res://data/alternative.gd"
+basic="*res://data/basic.gd"
+global="*res://global.gd"
+
+[display]
+
+window/size/width=800
+handheld/orientation="sensor_landscape"
+stretch/aspect="keep"
+stretch/mode="2d"
+window/height=600
+window/width=800
+
+[gui]
+
+theme/custom_font="res://new_styleboxflat.tres"
+
+[locale]
+
+fallback="cs"
+translations=[ "res://Menu.en.po", "res://hra.en.po" ]
+translation_remaps={
+"res://K.tex": PoolStringArray(  ),
+"res://S.tex": PoolStringArray(  ),
+"res://imported_Djavu.sv.png": PoolStringArray(  ),
+"res://new_styleboxflat.tres": PoolStringArray(  ),
+"res://new_theme.tres": PoolStringArray(  )
+}

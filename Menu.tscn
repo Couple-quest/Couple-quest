@@ -1,315 +1,407 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://S.tex" type="Texture" id=2]
-[ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://new_theme.tres" type="Theme" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 bg_color = Color( 0.427451, 0, 0, 1 )
-light_color = Color( 0.8, 0.8, 0.8, 1 )
-dark_color = Color( 0.8, 0.8, 0.8, 1 )
-border_size = 0
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0.8, 0.8, 0.8, 1 )
 border_blend = true
-draw_bg = true
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0, 0, 0, 0.6 )
+shadow_size = 0
+anti_aliasing = true
+anti_aliasing_size = 1
 
-[node name="Panel" type="Panel"]
+[node name="Panel" type="Panel" index="0"]
 
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 400.0
-margin/top = 300.0
-margin/right = -404.0
-margin/bottom = -300.0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -800.0
+margin_top = -600.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_styles/panel = SubResource( 1 )
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-transform/pos = Vector2( 399.858, 345.74 )
-transform/scale = Vector2( 1.15351, 1.15351 )
+position = Vector2( 49.2451, 151.28 )
 texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="start" type="Button" parent="."]
+[node name="start" type="Button" parent="." index="1"]
 
-visibility/blend_mode = 1
-anchor/left = 1
-anchor/right = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 764.0
-margin/top = 15.0
-margin/right = 484.0
-margin/bottom = 65.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -762.0
+margin_top = 35.0
+margin_right = -495.0
+margin_bottom = 85.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Start"
 flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="set" type="Button" parent="."]
+[node name="set" type="Button" parent="." index="2"]
 
-visibility/blend_mode = 1
-anchor/left = 3
-anchor/right = 3
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -80.0
-margin/top = 15.0
-margin/right = -360.0
-margin/bottom = 65.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -439.0
+margin_top = 39.0
+margin_right = -68.0
+margin_bottom = 89.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Možnosti"
 flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="Možnosti" type="PopupMenu" parent="set"]
+[node name="Možnosti" type="PopupMenu" parent="set" index="0"]
 
-visibility/visible = false
-anchor/left = 1
-anchor/right = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 757.0
-margin/top = 135.0
-margin/right = 37.0
-margin/bottom = 535.0
-popup/exclusive = false
+visible = false
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -665.0
+margin_top = 79.0
+margin_right = 73.0
+margin_bottom = 479.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+popup_exclusive = false
 items = [  ]
 hide_on_item_selection = false
+hide_on_state_item_selection = false
+_sections_unfolded = [ "Theme" ]
 
-[node name="Label" type="Label" parent="set/Možnosti"]
+[node name="Label" type="Label" parent="set/Možnosti" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 295.0
-margin/top = 19.0
-margin/right = 420.0
-margin/bottom = 48.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 295.0
+margin_top = 19.0
+margin_right = 420.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "Možnosti"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Visibility" ]
 
-[node name="balicek" type="Label" parent="set/Možnosti"]
+[node name="balicek" type="Label" parent="set/Možnosti" index="2"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 56.0
-margin/top = 91.0
-margin/right = 237.0
-margin/bottom = 120.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 56.0
+margin_top = 91.0
+margin_right = 237.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "Balíček karet"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="OptionButton" type="OptionButton" parent="set/Možnosti/balicek"]
+[node name="OptionButton" type="OptionButton" parent="set/Možnosti/balicek" index="0"]
 
-hint/tooltip = "Karty se kterýmy se bude hrát. [Zatím jednojazyčné: Basic (en) nebo Alternative (cs)]"
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 293.0
-margin/top = -14.0
-margin/right = 575.0
-margin/bottom = 41.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 293.0
+margin_top = -14.0
+margin_right = 575.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
+action_mode = 0
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "alternative"
 flat = false
 align = 0
 selected = 0
 items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
 
-[node name="delka" type="Label" parent="set/Možnosti"]
+[node name="delka" type="Label" parent="set/Možnosti" index="3"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 67.0
-margin/top = 187.0
-margin/right = 248.0
-margin/bottom = 216.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 67.0
+margin_top = 187.0
+margin_right = 248.0
+margin_bottom = 216.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "Délka hry"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="HScrollBar" type="HScrollBar" parent="set/Možnosti/delka"]
+[node name="HScrollBar" type="HScrollBar" parent="set/Možnosti/delka" index="0"]
 
-hint/tooltip = "Počet splněných karet požadovaných pro získání doměny."
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 298.0
-margin/top = -6.0
-margin/right = 529.0
-margin/bottom = 28.0
-range/min = 6.0
-range/max = 30.0
-range/step = 1.0
-range/page = 0.0
-range/value = 16.0
-range/exp_edit = false
-range/rounded = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 298.0
+margin_top = -6.0
+margin_right = 529.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+min_value = 6.0
+max_value = 30.0
+step = 1.0
+page = 0.0
+value = 16.0
+exp_edit = false
+rounded = false
 custom_step = -1.0
 
-[node name="curLen" type="Label" parent="set/Možnosti/delka/HScrollBar"]
+[node name="curLen" type="Label" parent="set/Možnosti/delka/HScrollBar" index="0"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 247.0
-margin/top = 10.0
-margin/right = 283.0
-margin/bottom = 39.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 247.0
+margin_top = 10.0
+margin_right = 283.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "16"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="jazyk" type="Label" parent="set/Možnosti"]
+[node name="jazyk" type="Label" parent="set/Možnosti" index="4"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 76.0
-margin/top = 274.0
-margin/right = 257.0
-margin/bottom = 303.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 76.0
+margin_top = 274.0
+margin_right = 257.0
+margin_bottom = 303.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "Jazyk"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="OptionButton" type="OptionButton" parent="set/Možnosti/jazyk"]
+[node name="OptionButton" type="OptionButton" parent="set/Možnosti/jazyk" index="0"]
 
-hint/tooltip = "Jazyk prostředí."
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 273.0
-margin/top = -18.0
-margin/right = 555.0
-margin/bottom = 37.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 273.0
+margin_top = -18.0
+margin_right = 555.0
+margin_bottom = 37.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
+action_mode = 0
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "cs"
 flat = false
 align = 0
 selected = 0
 items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
 
-[node name="LinkButton" type="LinkButton" parent="set/Možnosti"]
+[node name="LinkButton" type="LinkButton" parent="set/Možnosti" index="5"]
 
-hint/tooltip = "Otevřít v prohlížeči"
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 497.0
-margin/top = 348.0
-margin/right = 705.0
-margin/bottom = 377.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 497.0
+margin_top = 348.0
+margin_right = 705.0
+margin_bottom = 377.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/font_color_hover = Color( 1, 0.53125, 0.597168, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.234375, 0.234375, 1 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
+group = null
 text = "Víc na Githubu"
 
-[node name="Container" type="Container" parent="."]
+[node name="Container" type="Container" parent="." index="3"]
 
-editor/display_folded = true
-visibility/blend_mode = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 47.0
-margin/top = 532.0
-margin/right = 481.0
-margin/bottom = 576.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 84.0
+margin_top = 528.0
+margin_right = 518.0
+margin_bottom = 572.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Sprite 2" type="Sprite" parent="Container"]
+[node name="Sprite 2" type="Sprite" parent="Container" index="0"]
 
-transform/pos = Vector2( 37.5993, 19.3299 )
-transform/scale = Vector2( 0.603848, 0.603848 )
-texture = ExtResource( 5 )
+position = Vector2( 37.5993, 19.3299 )
+scale = Vector2( 0.603848, 0.603848 )
+texture = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="Container"]
+[node name="Label" type="Label" parent="Container" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 63.0
-margin/top = 5.0
-margin/right = 443.0
-margin/bottom = 34.0
-custom_fonts/font = ExtResource( 3 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 63.0
+margin_top = 5.0
+margin_right = 443.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "Vytvořeno v Godot Engine"
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="exit" type="Button" parent="."]
+[node name="exit" type="Button" parent="." index="4"]
 
-visibility/blend_mode = 1
-hint/tooltip = "Konec hry"
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 662.0
-margin/top = 537.0
-margin/right = 767.0
-margin/bottom = 570.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 602.0
+margin_top = 538.0
+margin_right = 707.0
+margin_bottom = 571.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Konec"
 flat = false
+align = 1
+_sections_unfolded = [ "Theme", "custom_fonts" ]
 
 [connection signal="pressed" from="set/Možnosti/LinkButton" to="." method="_on_LinkButton_pressed"]
 

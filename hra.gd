@@ -1,5 +1,5 @@
-#    Card game fo couple's foreplay.
-#    Copyright (C) 2017  Couple-quest
+#    Card game for couple's foreplay.
+#    Copyright (C) 2017-2018  Couple-quest
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -112,9 +112,9 @@ func restart():
 	get_node("Quit?/ne").connect("pressed",self,"no")
 
 func _ready():
-	if global.balik == "basic":
+	if global.balik == basic:
 		path = basic
-	if global.balik == "alternative":
+	if global.balik == alternative:
 		path = alternative
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
