@@ -112,9 +112,9 @@ func restart():
 	get_node("Quit?/ne").connect("pressed",self,"no")
 
 func _ready():
-	if global.balik == basic:
+	if str(global.balik) == "basic":
 		path = basic
-	if global.balik == alternative:
+	if str(global.balik) == "alternative":
 		path = alternative
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
