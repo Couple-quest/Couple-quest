@@ -10,7 +10,10 @@ config_version=3
 
 [application]
 
+config/name="Couple quest"
 run/main_scene="res://Menu.tscn"
+boot_splash/image="res://hra.png"
+config/icon="res://hra.png"
 icon="res://hra.png"
 main_scene="res://Menu.tscn"
 name="Couple quest"
@@ -24,24 +27,22 @@ global="*res://global.gd"
 [display]
 
 window/size/width=800
+window/size/borderless=true
+window/vsync/use_vsync=false
 handheld/orientation="sensor_landscape"
 stretch/aspect="keep"
 stretch/mode="2d"
 window/height=600
 window/width=800
 
-[gui]
-
-theme/custom_font="res://new_styleboxflat.tres"
-
 [locale]
 
 fallback="cs"
-translations=[ "res://Menu.en.po", "res://hra.en.po" ]
+translations=PoolStringArray( "res://Menu.en.po", "res://hra.en.po" )
 translation_remaps={
-"res://K.tex": PoolStringArray(  ),
-"res://S.tex": PoolStringArray(  ),
-"res://imported_Djavu.sv.png": PoolStringArray(  ),
-"res://new_styleboxflat.tres": PoolStringArray(  ),
-"res://new_theme.tres": PoolStringArray(  )
+
 }
+
+[rendering]
+
+quality/intended_usage/framebuffer_allocation=0
