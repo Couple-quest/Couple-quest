@@ -266,6 +266,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="screen" type="Sprite" parent="." index="5"]
 
+editor/display_folded = true
 position = Vector2( 400, 365 )
 scale = Vector2( 1.05864, 1.05864 )
 z_as_relative = false
@@ -327,7 +328,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="popend" type="PopupDialog" parent="." index="7"]
 
-visible = false
 light_mask = 0
 anchor_left = 0.0
 anchor_top = 0.0

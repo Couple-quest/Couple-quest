@@ -15,44 +15,37 @@
 #    along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 extends Panel
-var data
 var konec = 16
 var lang = "cs"
 
-func options():
-	get_node("set/Možnosti").popup()
-
-func quit():
-	get_tree().quit()
-
-func start():
-	get_tree().change_scene("res://hra.tscn")
-
 func _ready():
-	get_node("start").connect("pressed",self,"start")
-	get_node("set").connect("pressed",self,"options")
-	get_node("set/Možnosti/delka/HScrollBar").connect("value_changed",self,"hChange")
-	get_node("set/Možnosti/jazyk/OptionButton").connect("item_selected",self,"jazyk")
-	get_node("set/Možnosti/jazyk/OptionButton").select(global.langid)
-	get_node("set/Možnosti/balicek/OptionButton").connect("item_selected",self,"balik")
-	get_node("exit").connect("pressed",self,"quit")
-	
-func hChange(konec):
-	get_node("set/Možnosti/delka/HScrollBar/curLen").set_text(str(konec))
-	get_node("/root/global").fin = konec
-	
-func jazyk(lang):
-	var sel = get_node("set/Možnosti/jazyk/OptionButton").get_item_text(lang)
-	get_node("/root/global").jazyk = sel
-	get_node("/root/global").langid = lang
-	TranslationServer.set_locale(sel)
-	get_tree().reload_current_scene()
-	
-func balik(data):
-	var sel = get_node("set/Možnosti/balicek/OptionButton").get_item_text(data)
-	get_node("/root/global").balik = sel
+	pass
 
 
 func _on_LinkButton_pressed():
 	OS.shell_open("https://github.com/Couple-quest/Couple-quest")
-	pass
+
+func _on_start_pressed():
+	get_tree().change_scene("res://hra.tscn")
+
+func _on_set_pressed():
+	get_node("set/Možnosti").popup()
+
+func _on_exit_pressed():
+	get_tree().quit()
+
+func _on_HScrollBar_value_changed(value):
+	get_node("set/Možnosti/delka/HScrollBar/curLen").set_text(str(value))
+	get_node("/root/global").fin = value
+
+func _on_OptionButton_item_selected(ID):
+	get_node("/root/global").balik = ID
+
+
+func _on_OptionButtonL_item_selected( ID ):
+	var sel = get_node("set/Možnosti/jazyk/OptionButton").get_item_text(ID)
+	get_node("/root/global").jazyk = sel
+	get_node("/root/global").langid = ID
+	TranslationServer.set_locale(sel)
+	get_tree().reload_current_scene()
+	get_node("set/Možnosti/jazyk/OptionButton").select(global.langid)

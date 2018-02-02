@@ -19,7 +19,7 @@ extends Node
 var jazyk  = "cs" #language set
 var langid = 0
 var fin = 16 #end score
-var balik = alternative #selected deck
+var balik = 0 #selected deck 1==alternative
 
 func _ready():
 	pass

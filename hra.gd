@@ -59,15 +59,15 @@ func balicek(): #set card deck ## zjistÃ­ dostupnÃ© karty a obnovÃ­ balÃ�
 		vyberOna=range(1, (je.size()))
 		je=path.get(faze + "On")
 		vyberOn=range(1, (je.size()))
-		print("novü†¼²„Ã½ balÃ­Äek oba")
+		print("noví balíček oba")
 	elif vyberOna.size()==0: #empty deck Ona
 		je=path.get(faze + "Ona")
 		vyberOna=range(1, (je.size()))
-		print("novÃ½ balÃ­Äek ona")
+		print("nový balíček ona")
 	elif vyberOn.size()==0: #empty deck On
 		je = path.get(faze + "On")
 		vyberOn=range(1, (je.size()))
-		print("novÃ½ balÃ­Äek On")
+		print("nový balíček On")
 
 func tik(): #old_kolo ## roound cycle ##konec tahu
 	if hraje == "On":
@@ -112,9 +112,9 @@ func restart():
 	get_node("Quit?/ne").connect("pressed",self,"no")
 
 func _ready():
-	if str(global.balik) == "basic":
+	if str(global.balik) == "1":
 		path = basic
-	if str(global.balik) == "alternative":
+	if str(global.balik) == "0":
 		path = alternative
 	balicek()
 	get_node("fant").connect("pressed",self,"kolo")
