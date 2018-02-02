@@ -39,11 +39,11 @@ func kolo(): #old_ok
 	get_node("on").set_text(str(scoreOn))
 	get_node("ona").set_text(str(scoreOna))
 
-func ok(): ##button #tlaÄÃ­tko "SplnÄ›no"
+func ok(): ##button #tlačítko "Splněno"
 	bod()
 	kolo()
 
-func jefaze(): #set phase of game to "faze" #vybÃ¡rÃ¡ fÃ¡zy
+func jefaze(): #set phase of game to "faze" #vybrat fázi
 	minulafaze=faze
 	if (scoreOn > cil/3) or (scoreOna > cil/3):
 		faze = "R"
@@ -53,7 +53,7 @@ func jefaze(): #set phase of game to "faze" #vybÃ¡rÃ¡ fÃ¡zy
 		faze = "I"
 	print(faze)
 
-func balicek(): #set card deck ## zjistÃ­ dostupnÃ© karty a obnovÃ­ balÃ­Äek pÅ™i zmÄ›nÄ› fÃ¡zÃ­
+func balicek(): #set card deck ## zjisti­ dostupné karty a obnoví­ balíček při změně fáze
 	if not(faze==minulafaze): ##new phase = new deck
 		je=path.get(faze + "Ona")
 		vyberOna=range(1, (je.size()))
@@ -84,7 +84,7 @@ func tik(): #old_kolo ## roound cycle ##konec tahu
 	randomize() #randomseed
 	print("tak")
 
-func bod(): #add score ##poÄÃ­tÃ¡nÃ­ bodÅ¯
+func bod(): #add score ##počítá body
 	if hraje == "Ona":
 		scoreOna+=1
 	else:
