@@ -1,0 +1,45 @@
+# Translation Strings Dump.
+# Created By.
+# 	Godot Engine v2.1.2.stable.official (c) 2008-2017 Juan Linietsky, Ariel Manzur.
+# From Scene: 
+# 	res://Menu.tscn
+
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: <define>\n"
+"POT-Creation-Date: 2017-2-6 12:390000\n"
+"Language-Team: <define>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Možnosti"
+msgstr "Optionen"
+
+msgid "16"
+msgstr "16"
+
+msgid "Délka hry"
+msgstr "Spiel länge"
+
+msgid "Jazyk"
+msgstr "Sprache"
+
+msgid "en"
+msgstr "en"
+
+msgid "Vytvořeno v Godot Engine"
+msgstr "Erstellt mit Godot Engine"
+
+msgid "Balíček karet"
+msgstr "Karten deck"
+
+msgid "cs"
+msgstr "cs"
+
+msgid "Konec"
+msgstr "Beenden"
