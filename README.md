@@ -3,7 +3,7 @@
 
 Simple "board-like" game for couples.
 
-Rewrited in GDScript, using [Godot Engine](https://godotengine.org/)
+Rewrited in GDScript, using [Godot Engine v2.1](https://godotengine.org/) 
 
 
 ### Contribute
@@ -26,7 +26,7 @@ Tranaslations are stored in *file*.*languecode*.po like [`Menu.en.po`](/Menu.en.
 
 ## GPL-3.0
 
-    Card game fo couple's foreplay.
+    Card game for couple's foreplay.
     Copyright (C) 2017  Couple-quest
 
     This program is free software: you can redistribute it and/or modify
