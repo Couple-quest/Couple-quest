@@ -44,7 +44,13 @@ func _on_OptionButton_item_selected(ID):
 
 func _on_OptionButtonL_item_selected(ID):
 	var sel = get_node("set/Možnosti/jazyk/OptionButtonL").get_item_text(ID)
-	get_node("/root/global").jazyk = sel
+	get_node("/root/global").jazyk = ID
 	get_node("/root/global").langid = ID
-	TranslationServer.set_locale(sel)	
+	print(ID," ID")
+	print(sel," sel")
+	print(global.langid," global.langid")
+	print(global.jazyk," global.jazyk")
+	print(TranslationServer.get_locale())
+	TranslationServer.set_locale(sel)
+	print(TranslationServer.get_locale())
 	
