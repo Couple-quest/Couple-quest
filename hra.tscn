@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://hra.gd" type="Script" id=1]
-[ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://K.tex" type="Texture" id=3]
+[ext_resource path="res://new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://hra.gd" type="Script" id=2]
+[ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://K.tex" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -23,16 +24,18 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 800.0
 margin/bottom = 600.0
 custom_styles/panel = SubResource( 1 )
-script/script = ExtResource( 1 )
+script/script = ExtResource( 2 )
 
 [node name="ok" type="Button" parent="."]
 
 visibility/blend_mode = 1
+hint/tooltip = "Ukol byl splněn."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -41,7 +44,7 @@ margin/left = 40.0
 margin/top = 15.0
 margin/right = 320.0
 margin/bottom = 65.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -51,6 +54,7 @@ flat = false
 [node name="fant" type="Button" parent="."]
 
 visibility/blend_mode = 1
+hint/tooltip = "Nesplněno, dávám kus oblečení jako fant."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -59,7 +63,7 @@ margin/left = 480.0
 margin/top = 15.0
 margin/right = 760.0
 margin/bottom = 65.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -68,14 +72,16 @@ flat = false
 
 [node name="on" type="Label" parent="."]
 
-focus/ignore_mouse = true
+hint/tooltip = "Počet jejich splněnýcj úkolů."
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 330.0
-margin/top = 90.0
-margin/right = 370.0
-margin/bottom = 104.0
+margin/left = 316.0
+margin/top = 81.0
+margin/right = 373.0
+margin/bottom = 110.0
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 0.402344, 0.402344, 1 )
 text = "Ona"
 align = 2
@@ -85,14 +91,17 @@ max_lines_visible = -1
 
 [node name="hraje" type="Label" parent="."]
 
-focus/ignore_mouse = true
+rect/scale = Vector2( 0.7, 0.7 )
+hint/tooltip = "Kdo je na řadě a má plnit tento úkol."
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 380.0
-margin/top = 89.0
-margin/right = 420.0
-margin/bottom = 103.0
+margin/left = 375.0
+margin/top = 87.0
+margin/right = 447.0
+margin/bottom = 116.0
+custom_fonts/font = ExtResource( 3 )
 text = "hraje"
 align = 1
 percent_visible = 1.0
@@ -101,14 +110,16 @@ max_lines_visible = -1
 
 [node name="ona" type="Label" parent="."]
 
-focus/ignore_mouse = true
+hint/tooltip = "Počet jeho splněnýcj úkolů."
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 430.0
-margin/top = 90.0
-margin/right = 470.0
-margin/bottom = 104.0
+margin/left = 427.0
+margin/top = 81.0
+margin/right = 467.0
+margin/bottom = 110.0
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.873779, 0.816406, 1, 1 )
 text = "On"
 percent_visible = 1.0
@@ -120,7 +131,7 @@ max_lines_visible = -1
 transform/pos = Vector2( 400, 365 )
 transform/scale = Vector2( 1.05864, 1.05864 )
 z/relative = false
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="ukol" type="Label" parent="screen"]
 
@@ -129,10 +140,12 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -320.0
-margin/top = -190.0
+margin/top = -189.0
 margin/right = 320.0
-margin/bottom = 50.0
-custom_fonts/font = ExtResource( 2 )
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0.867188, 0.867188, 1 )
+custom_constants/shadow_offset_x = 0
 text = "nenačetl se úkol"
 align = 1
 valign = 1
@@ -144,11 +157,14 @@ max_lines_visible = -1
 [node name="popend" type="PopupDialog" parent="."]
 
 visibility/visible = false
+visibility/opacity = 0.95
 visibility/light_mask = 0
+hint/tooltip = "Odměna za víězství pro tvůj protějšek."
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
 margin/left = 60.0
 margin/top = 260.0
 margin/right = 740.0
@@ -164,10 +180,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
+margin/top = 1.0
 margin/right = 0.0
-margin/bottom = 0.0
-custom_fonts/font = ExtResource( 2 )
+margin/bottom = -1.0
+custom_fonts/font = ExtResource( 3 )
 text = "nenačetla se odměna :-("
 align = 1
 valign = 1
@@ -180,28 +196,33 @@ max_lines_visible = -1
 
 visibility/blend_mode = 1
 visibility/light_mask = 0
+rect/scale = Vector2( 0.5, 0.5 )
+hint/tooltip = "Zpět do menu."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 660.0
 margin/top = 80.0
-margin/right = 760.0
-margin/bottom = 120.0
+margin/right = 838.0
+margin/bottom = 148.0
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 click_on_press = true
 enabled_focus_mode = 0
 shortcut = null
-text = "Restart"
+text = "Ukončit"
 flat = false
 
 [node name="Quit?" type="PopupPanel" parent="."]
 
 visibility/visible = false
+visibility/blend_mode = 3
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
 margin/left = 138.0
 margin/top = 184.0
 margin/right = 636.0
@@ -218,8 +239,8 @@ margin/left = 101.0
 margin/top = 11.0
 margin/right = 432.0
 margin/bottom = 46.0
-custom_fonts/font = ExtResource( 2 )
-text = "Návrat do menu\?"
+custom_fonts/font = ExtResource( 3 )
+text = "Návrat do menu?"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -227,6 +248,7 @@ max_lines_visible = -1
 
 [node name="Ano" type="Button" parent="Quit?"]
 
+hint/tooltip = "do menu"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -235,7 +257,7 @@ margin/left = 67.0
 margin/top = 77.0
 margin/right = 215.0
 margin/bottom = 122.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -244,6 +266,7 @@ flat = false
 
 [node name="ne" type="Button" parent="Quit?"]
 
+hint/tooltip = "hrát dál"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -252,7 +275,7 @@ margin/left = 317.0
 margin/top = 79.0
 margin/right = 457.0
 margin/bottom = 128.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

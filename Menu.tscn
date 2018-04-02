@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://S.tex" type="Texture" id=2]
 [ext_resource path="res://imported_Djavu.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://new_theme.tres" type="Theme" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -83,15 +84,17 @@ flat = false
 
 [node name="Možnosti" type="PopupMenu" parent="set"]
 
-visibility/visible = false
+anchor/left = 1
+anchor/right = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -449.0
-margin/top = 104.0
-margin/right = 271.0
-margin/bottom = 504.0
+theme/theme = ExtResource( 4 )
+margin/left = 759.0
+margin/top = 135.0
+margin/right = 39.0
+margin/bottom = 535.0
 popup/exclusive = false
 items = [  ]
 hide_on_item_selection = false
@@ -130,6 +133,7 @@ max_lines_visible = -1
 
 [node name="OptionButton" type="OptionButton" parent="set/Možnosti/balicek"]
 
+hint/tooltip = "Karty se kterýmy se bude hrát. [Zatím jednojazyčné: Basic (en) nebo Alternative (cs)]"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -149,7 +153,6 @@ items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
 
 [node name="delka" type="Label" parent="set/Možnosti"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -166,14 +169,15 @@ max_lines_visible = -1
 
 [node name="HScrollBar" type="HScrollBar" parent="set/Možnosti/delka"]
 
+hint/tooltip = "Počet splněných karet požadovaných pro získání doměny."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 298.0
-margin/top = -4.0
+margin/top = -6.0
 margin/right = 529.0
-margin/bottom = 30.0
+margin/bottom = 28.0
 range/min = 6.0
 range/max = 30.0
 range/step = 1.0
@@ -216,6 +220,7 @@ max_lines_visible = -1
 
 [node name="OptionButton" type="OptionButton" parent="set/Možnosti/jazyk"]
 
+hint/tooltip = "Jazyk prostředí."
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -232,6 +237,24 @@ flat = false
 align = 0
 selected = 0
 items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
+
+[node name="LinkButton" type="LinkButton" parent="set/Možnosti"]
+
+hint/tooltip = "Otevřít v prohlížeči"
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 497.0
+margin/top = 348.0
+margin/right = 705.0
+margin/bottom = 377.0
+custom_colors/font_color_hover = Color( 1, 0.53125, 0.597168, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.234375, 0.234375, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+text = "Víc na Githubu"
 
 [node name="Container" type="Container" parent="."]
 
@@ -250,7 +273,7 @@ margin/bottom = 576.0
 
 transform/pos = Vector2( 37.5993, 19.3299 )
 transform/scale = Vector2( 0.603848, 0.603848 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Container"]
 
@@ -271,6 +294,8 @@ max_lines_visible = -1
 
 [node name="exit" type="Button" parent="."]
 
+visibility/blend_mode = 1
+hint/tooltip = "Konec hry"
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -282,7 +307,9 @@ margin/bottom = 570.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Quit"
+text = "Konec"
 flat = false
+
+[connection signal="pressed" from="set/Možnosti/LinkButton" to="." method="_on_LinkButton_pressed"]
 
 

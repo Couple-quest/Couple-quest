@@ -127,7 +127,3 @@ func _ready():
 	else:
 		hraje = "Ona"
 	pass
-
-
-func _on_Restart_pressed():
-	pass # replace with function body

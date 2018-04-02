@@ -18,28 +18,28 @@ msgid "Start"
 msgstr "Start"
 
 msgid "Možnosti"
-msgstr "Options"
+msgstr "Optionen"
 
 msgid "16"
 msgstr "16"
 
 msgid "Délka hry"
-msgstr "Game lenght"
+msgstr "Spiel länge"
 
 msgid "Jazyk"
-msgstr "Language"
+msgstr "Sprache"
 
 msgid "en"
 msgstr "en"
 
 msgid "Vytvořeno v Godot Engine"
-msgstr "Created with Godot Engine"
+msgstr "Erstellt mit Godot Engine"
 
 msgid "Balíček karet"
-msgstr "Card deck"
+msgstr "Karten deck"
 
 msgid "cs"
 msgstr "cs"
 
 msgid "Konec"
-msgstr "Quit"
+msgstr "Beenden"

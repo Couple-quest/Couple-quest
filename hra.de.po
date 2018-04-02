@@ -15,34 +15,34 @@ msgstr ""
 
 
 msgid "On"
-msgstr "Him"
+msgstr "ihm"
 
 msgid "hraje"
-msgstr "play"
+msgstr "spielen"
 
 msgid "Ona"
-msgstr "Her"
+msgstr "ihr"
 
 msgid "nenačetl se úkol"
-msgstr "Task wasn't loaded"
+msgstr "Aufgabe wurde nicht geladen"
 
 msgid "Splněno"
-msgstr "Done"
+msgstr "erleigt"
 
 msgid "nenačetla se odměna :-("
-msgstr "Can't load reward :-("
+msgstr "Kann Belohnung nicht laden :-("
 
 msgid "Fant"
-msgstr "Dare"
+msgstr "wagen"
 
 msgid "Zpět"
-msgstr "Back"
+msgstr "Zurück"
 
 msgid "Návrat do menu\?"
-msgstr "Back to menu\?"
+msgstr "Zurück zum Menü\?"
 
 msgid "Ano"
-msgstr "Yes"
+msgstr "ja"
 
 msgid "Ukončit"
-msgstr "Close"
+msgstr "Schließen"
