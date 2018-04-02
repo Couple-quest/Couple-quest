@@ -37,6 +37,7 @@ anchor_bottom = 1.0
 margin_left = -800.0
 margin_top = -600.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -64,6 +65,7 @@ margin_right = -560.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.5, 1.5 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -78,7 +80,33 @@ flat = false
 align = 1
 _sections_unfolded = [ "Margin", "Rect", "Theme", "custom_fonts" ]
 
-[node name="set" type="Button" parent="." index="2"]
+[node name="exit" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 602.0
+margin_top = 538.0
+margin_right = 707.0
+margin_bottom = 571.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Konec"
+flat = false
+align = 1
+_sections_unfolded = [ "Theme", "custom_fonts" ]
+
+[node name="set" type="Button" parent="." index="3"]
 
 anchor_left = 1.0
 anchor_top = 0.0
@@ -90,6 +118,7 @@ margin_right = -178.0
 margin_bottom = 70.0
 rect_scale = Vector2( 1.5, 1.5 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -115,6 +144,7 @@ margin_top = 79.0
 margin_right = 73.0
 margin_bottom = 479.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -138,6 +168,7 @@ margin_right = 400.0
 margin_bottom = 39.0
 rect_scale = Vector2( 1.5, 1.5 )
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -159,6 +190,7 @@ margin_top = 91.0
 margin_right = 237.0
 margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -180,6 +212,7 @@ margin_top = -14.0
 margin_right = 575.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -193,8 +226,8 @@ group = null
 text = "alternative"
 flat = false
 align = 0
-selected = 0
 items = [ "alternative", null, false, 0, null, "basic", null, false, 1, null ]
+selected = 0
 
 [node name="delka" type="Label" parent="set/Možnosti" index="3"]
 
@@ -207,6 +240,7 @@ margin_top = 187.0
 margin_right = 248.0
 margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -228,6 +262,7 @@ margin_top = -6.0
 margin_right = 529.0
 margin_bottom = 28.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -252,6 +287,7 @@ margin_top = 10.0
 margin_right = 283.0
 margin_bottom = 39.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -272,6 +308,7 @@ margin_top = 274.0
 margin_right = 257.0
 margin_bottom = 303.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -293,6 +330,7 @@ margin_top = -18.0
 margin_right = 555.0
 margin_bottom = 37.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -306,8 +344,8 @@ group = null
 text = "cs"
 flat = false
 align = 0
+items = [ "cs", null, false, 0, null, "en", null, false, 1, null, "de", null, false, 2, null ]
 selected = 0
-items = [ "cs", null, false, 0, null, "en", null, false, 1, null ]
 
 [node name="LinkButton" type="LinkButton" parent="set/Možnosti" index="5"]
 
@@ -320,6 +358,7 @@ margin_top = 348.0
 margin_right = 705.0
 margin_bottom = 377.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 2
@@ -344,6 +383,7 @@ margin_top = 334.0
 margin_right = 341.0
 margin_bottom = 378.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -366,6 +406,7 @@ margin_top = 5.0
 margin_right = 443.0
 margin_bottom = 34.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
@@ -377,32 +418,9 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="exit" type="Button" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 602.0
-margin_top = 538.0
-margin_right = 707.0
-margin_bottom = 571.0
-rect_pivot_offset = Vector2( 0, 0 )
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Konec"
-flat = false
-align = 1
-_sections_unfolded = [ "Theme", "custom_fonts" ]
-
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 
 [connection signal="pressed" from="set" to="." method="_on_set_pressed"]
 
@@ -410,12 +428,10 @@ _sections_unfolded = [ "Theme", "custom_fonts" ]
 
 [connection signal="value_changed" from="set/Možnosti/delka/HScrollBar" to="." method="_on_HScrollBar_value_changed"]
 
-[connection signal="item_selected" from="set/Možnosti/jazyk/OptionButtonL" to="." method="_on_OptionButton_item_selected"]
-
 [connection signal="item_selected" from="set/Možnosti/jazyk/OptionButtonL" to="." method="_on_OptionButtonL_item_selected"]
 
-[connection signal="pressed" from="set/Možnosti/LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="item_selected" from="set/Možnosti/jazyk/OptionButtonL" to="." method="_on_OptionButton_item_selected"]
 
-[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="set/Možnosti/LinkButton" to="." method="_on_LinkButton_pressed"]
 
 

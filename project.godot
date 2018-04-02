@@ -38,7 +38,7 @@ window/width=800
 [locale]
 
 fallback="cs"
-translations=PoolStringArray( "res://Menu.en.po", "res://hra.en.po" )
+translations=PoolStringArray( "res://data/alternative.cs.po", "res://hra.de.po", "res://hra.en.po", "res://Menu.de.po", "res://Menu.en.po", "res://hra.cs.po", "res://Menu.cs.po" )
 
 [rendering]
 
