@@ -3,7 +3,7 @@
 
 Simple "board-like" game for couples.
 
-Rewrited in GDScript, using [Godot Engine v2.1](https://godotengine.org/) 
+Rewrited in GDScript, using [Godot Engine v3.0](https://godotengine.org/) 
 
 
 ### Contribute
