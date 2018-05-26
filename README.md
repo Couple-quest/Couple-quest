@@ -1,5 +1,5 @@
 # Couple-quest <img src="hra.png" align="right">
->### [Download latest release](../../releases/latest)
+>### [Download latest release](../../releases/latest) or [Try it online](https://couple-quest.github.io/Couple-quest/)
 
 Simple "board-like" game for couples.
 
