@@ -1,5 +1,5 @@
 # Couple-quest <img src="hra.png" align="right">
->### [Latest release](../../releases/latest)
+>### [Download latest release](../../releases/latest)
 
 Simple "board-like" game for couples.
 
@@ -19,9 +19,9 @@ Task deck is selceted in game menu, curently we have czech and english tasks in 
 #### translate PO files 
 Tranaslations are stored in *file*.*languecode*.po like [`Menu.en.po`](/Menu.en.po) (and templates as [`alternative.pot`](/data/alternative.pot))
 ### In game screenshots
+<img src="/screen_game.png">
 <img src="/screen_menu.png">
 <img src="/screen_options.png">
-<img src="/screen_game.png">
 <img src="/screen_end.png">
 
 ## GPL-3.0
